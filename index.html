@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WAMA Underwear - Email Performance - May 2026</title>
+  <title>WAMA Underwear - Email Performance Dashboard</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -12,15 +12,36 @@
       --red-light:#FDECEA;--text:#27271F;--muted:#6A6A5A;--border:#DDD5C8;--row-alt:#FDFCF9;
     }
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+
+    /* Header */
     .header{background:var(--dark);padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;}
     .header-left{display:flex;align-items:baseline;gap:14px;}
     .header-brand{color:#fff;font-size:18px;font-weight:700;letter-spacing:-.3px;}
     .header-divider{color:rgba(255,255,255,.25);font-size:16px;}
     .header-title{color:rgba(255,255,255,.65);font-size:14px;}
     .header-badge{background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;}
+
+    /* Tab navigation */
+    .tab-nav-wrapper{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding:0 48px;}
+    .tab-nav{display:flex;gap:0;max-width:1060px;margin:0 auto;}
+    .tab-btn{background:none;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,.45);font-size:13px;font-weight:500;padding:12px 18px;cursor:pointer;transition:color .15s, border-color .15s;letter-spacing:.1px;font-family:inherit;}
+    .tab-btn:hover{color:rgba(255,255,255,.75);}
+    .tab-btn.active{color:#fff;border-bottom-color:var(--green-mid);font-weight:600;}
+    .tab-btn.coming-soon-tab{color:rgba(255,255,255,.25);cursor:default;}
+    .tab-btn.coming-soon-tab:hover{color:rgba(255,255,255,.35);}
+
+    /* Tab content */
+    .tab-content{display:none;}
+    .tab-content.active{display:block;}
+
+    /* Container */
     .container{max-width:1060px;margin:0 auto;padding:40px 48px 64px;}
+
+    /* Section labels */
     .section-label{font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;margin-top:44px;}
     .section-label:first-child{margin-top:0;}
+
+    /* Revenue grid */
     .revenue-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:14px;}
     .rev-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 20px 20px;}
     .rev-card.hero{background:var(--dark);border-color:var(--dark);}
@@ -32,6 +53,8 @@
     .rev-card.hero .rev-sub{color:rgba(255,255,255,.45);}
     .rev-change{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:12px;font-weight:600;color:#5FAD7A;}
     .rev-card.hero .rev-change{color:#7CC994;}
+
+    /* Attribution bar */
     .attr-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;margin-top:14px;}
     .attr-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;}
     .attr-heading{font-size:13px;font-weight:600;}
@@ -43,8 +66,12 @@
     .legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
     .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
     .legend-val{font-weight:600;color:var(--text);margin-left:2px;}
+
+    /* Quick stats */
     .quick-stats{display:flex;gap:10px;flex-wrap:wrap;}
     .stat-pill{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:7px 16px;font-size:12.5px;display:flex;align-items:center;gap:7px;}
+
+    /* Table */
     .table-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
     table{width:100%;border-collapse:collapse;}
     th{text-align:left;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);padding:13px 18px;border-bottom:1px solid var(--border);background:#FAFAF7;}
@@ -56,6 +83,8 @@
     td.center{text-align:center;}
     td.muted{color:var(--muted);}
     .campaign-name{font-weight:500;color:var(--text);}
+
+    /* Tags */
     .tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px;white-space:nowrap;}
     .tag-green{background:var(--green-light);color:#2C5C3A;}
     .tag-amber{background:var(--amber-light);color:var(--amber);}
@@ -64,6 +93,8 @@
     .dot-g{background:var(--green);}
     .dot-a{background:#D4884A;}
     .dot-r{background:var(--red);}
+
+    /* Metrics */
     .metric{font-variant-numeric:tabular-nums;}
     .metric.good{color:var(--green);font-weight:500;}
     .metric.warn{color:var(--amber);font-weight:600;}
@@ -72,6 +103,8 @@
     .rank-num.top3{color:#B8A48A;}
     .rev-tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--green);font-variant-numeric:tabular-nums;}
     .rpr-high{color:var(--green);font-weight:600;}
+
+    /* Flow grid */
     .flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
     .flow-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;}
     .flow-card.top{border-left:3px solid var(--green);}
@@ -82,161 +115,234 @@
     .flow-rev-block{text-align:right;}
     .flow-rev{font-size:16px;font-weight:700;color:var(--green);letter-spacing:-.3px;}
     .flow-orders{font-size:11px;color:var(--muted);margin-top:1px;}
+
+    /* Health grid */
     .health-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
     .health-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;gap:14px;}
     .health-icon{font-size:20px;line-height:1;margin-top:1px;flex-shrink:0;}
     .health-heading{font-size:13px;font-weight:600;margin-bottom:4px;}
     .health-body{font-size:12.5px;color:var(--muted);line-height:1.55;}
+
+    /* Watch list */
     .watch-list{display:flex;flex-direction:column;gap:10px;}
     .watch-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:0 10px 10px 0;padding:14px 18px;}
     .watch-item.priority{border-left-color:var(--red);}
     .watch-heading{font-size:13px;font-weight:600;margin-bottom:3px;}
     .watch-body{font-size:12.5px;color:var(--muted);line-height:1.5;}
+
+    /* Insight band */
+    .insight-band{background:var(--green-light);border:1px solid #C0D9C8;border-radius:10px;padding:13px 18px;margin-top:14px;font-size:12.5px;color:#2A4F35;line-height:1.55;}
+    .insight-band strong{font-weight:700;}
+
+    /* Footer */
     .footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
     .footer-left{font-size:12px;color:var(--muted);line-height:1.6;}
     .footer-brand{font-weight:600;color:var(--text);}
     .footer-right{font-size:12px;color:var(--muted);text-align:right;}
-    .insight-band{background:var(--green-light);border:1px solid #C0D9C8;border-radius:10px;padding:13px 18px;margin-top:14px;font-size:12.5px;color:#2A4F35;line-height:1.55;}
-    .insight-band strong{font-weight:700;}
+
+    /* Coming soon state */
+    .coming-soon-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px;text-align:center;padding:60px 48px;}
+    .coming-soon-icon{font-size:40px;margin-bottom:20px;opacity:.4;}
+    .coming-soon-title{font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;}
+    .coming-soon-sub{font-size:13.5px;color:var(--muted);line-height:1.6;max-width:340px;}
+    .coming-soon-date{display:inline-block;margin-top:16px;background:var(--green-light);color:var(--green);border:1px solid #C0D9C8;border-radius:20px;padding:6px 16px;font-size:12px;font-weight:600;}
   </style>
 </head>
 <body>
+
 <header class="header">
   <div class="header-left">
     <span class="header-brand">WAMA Underwear</span>
     <span class="header-divider">|</span>
-    <span class="header-title">Email Performance Report</span>
+    <span class="header-title">Email Performance Dashboard</span>
   </div>
-  <span class="header-badge">May 1 - 31, 2026</span>
+  <span class="header-badge">2026</span>
 </header>
-<div class="container">
-  <div class="section-label">Revenue Overview</div>
-  <div class="revenue-grid">
-    <div class="rev-card hero">
-      <div class="rev-label">Total Revenue</div>
-      <div class="rev-value">$89,693</div>
-      <div class="rev-sub">May 1 - 31, 2026</div>
-      <div class="rev-change">+96% vs last year</div>
-    </div>
-    <div class="rev-card">
-      <div class="rev-label">Email Attributed</div>
-      <div class="rev-value">$38,758</div>
-      <div class="rev-sub">43.2% of total revenue</div>
-      <div class="rev-change">+136% vs last year</div>
-    </div>
-    <div class="rev-card">
-      <div class="rev-label">From Flows</div>
-      <div class="rev-value">$28,640</div>
-      <div class="rev-sub">73.9% of email revenue</div>
-    </div>
-    <div class="rev-card">
-      <div class="rev-label">From Campaigns</div>
-      <div class="rev-value">$10,118</div>
-      <div class="rev-sub">26.1% of email revenue</div>
-    </div>
-  </div>
-  <div class="attr-card">
-    <div class="attr-top">
-      <span class="attr-heading">Email Revenue Split</span>
-      <span class="attr-note">Flows vs. Campaigns - 5-day attribution window</span>
-    </div>
-    <div class="attr-bar">
-      <div class="attr-flows"></div>
-      <div class="attr-campaigns"></div>
-    </div>
-    <div class="attr-legend">
-      <div class="legend-item">
-        <div class="legend-dot" style="background:var(--green);"></div>
-        Automated Flows <span class="legend-val">$28,640 - 73.9%</span>
+
+<div class="tab-nav-wrapper">
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="may2026">May 2026</button>
+    <button class="tab-btn coming-soon-tab" data-tab="jun2026" title="Report publishes July 6">Jun 2026</button>
+  </nav>
+</div>
+
+<!-- ===================== MAY 2026 ===================== -->
+<div id="may2026" class="tab-content active">
+  <div class="container">
+
+    <div class="section-label">Revenue Overview</div>
+    <div class="revenue-grid">
+      <div class="rev-card hero">
+        <div class="rev-label">Total Revenue</div>
+        <div class="rev-value">$89,693</div>
+        <div class="rev-sub">May 1 - 31, 2026</div>
+        <div class="rev-change">+96% vs last year</div>
       </div>
-      <div class="legend-item">
-        <div class="legend-dot" style="background:#A2C4AF;"></div>
-        Campaigns <span class="legend-val">$10,118 - 26.1%</span>
+      <div class="rev-card">
+        <div class="rev-label">Email Attributed</div>
+        <div class="rev-value">$38,758</div>
+        <div class="rev-sub">43.2% of total revenue</div>
+        <div class="rev-change">+136% vs last year</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-label">From Flows</div>
+        <div class="rev-value">$28,640</div>
+        <div class="rev-sub">73.9% of email revenue</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-label">From Campaigns</div>
+        <div class="rev-value">$10,118</div>
+        <div class="rev-sub">26.1% of email revenue</div>
       </div>
     </div>
-  </div>
-  <div class="section-label">Month at a Glance</div>
-  <div class="quick-stats">
-    <div class="stat-pill"><strong>10</strong> campaigns sent</div>
-    <div class="stat-pill"><strong>110,397</strong> emails delivered</div>
-    <div class="stat-pill"><strong>63%</strong> avg open rate</div>
-    <div class="stat-pill"><strong>17</strong> active flows</div>
-    <div class="stat-pill"><strong>239</strong> flow orders</div>
-    <div class="stat-pill" style="border-color:var(--green);color:var(--green);"><strong>100%</strong> delivery rate</div>
-  </div>
-  <div class="section-label">Campaign Engagement</div>
-  <div class="table-card">
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th><th>Campaign</th><th>Audience</th>
-          <th class="right">Recipients</th><th class="right">Open Rate</th>
-          <th class="right">Click Rate</th><th class="center">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="muted">May 2</td><td><div class="campaign-name">Your Boys Deserve Better Than Synthetic</div></td><td class="muted">Engaged 20D + Clicked</td><td class="right metric">4,899</td><td class="right metric good">76.3%</td><td class="right metric warn">0.96%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-        <tr><td class="muted">May 5</td><td><div class="campaign-name">35% Off V-Neck Shirt</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,393</td><td class="right metric good">57.4%</td><td class="right metric warn">0.90%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-        <tr><td class="muted">May 8</td><td><div class="campaign-name">Limited Edition Boxer Briefs Reminder</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,363</td><td class="right metric good">67.0%</td><td class="right metric flag">0.51%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-        <tr><td class="muted">May 12</td><td><div class="campaign-name">Product Highlight: Pajama Shorts</div></td><td class="muted">Engaged 90D + Clicked</td><td class="right metric">6,836</td><td class="right metric good">62.4%</td><td class="right metric good">1.26%</td><td class="center"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
-        <tr><td class="muted">May 15</td><td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson)</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,340</td><td class="right metric good">67.0%</td><td class="right metric warn">0.83%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-        <tr><td class="muted">May 19</td><td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,347</td><td class="right metric good">67.9%</td><td class="right metric good">1.36%</td><td class="center"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
-        <tr><td class="muted">May 22</td><td><div class="campaign-name">Perfect Pair: Shirts + Pajamas</div></td><td class="muted">Engaged 60D</td><td class="right metric">12,545</td><td class="right metric good">70.9%</td><td class="right metric warn">0.82%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-        <tr><td class="muted">May 25</td><td><div class="campaign-name">FREE Pair On Us</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,262</td><td class="right metric good">68.2%</td><td class="right metric warn">0.63%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-        <tr><td class="muted">May 27</td><td><div class="campaign-name">Wallet Balance Reminder</div></td><td class="muted">With Rewards Balance</td><td class="right metric">898</td><td class="right metric good">47.9%</td><td class="right metric good">1.78%</td><td class="center"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
-        <tr><td class="muted">May 29</td><td><div class="campaign-name">What made you curious about hemp?</div></td><td class="muted">Buyer + Engaged 180D</td><td class="right metric">18,514</td><td class="right metric good">49.7%</td><td class="right metric flag">0.46%</td><td class="center"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="section-label">Campaign Revenue - Ranked by Revenue</div>
-  <div class="table-card">
-    <table>
-      <thead>
-        <tr><th style="width:40px;">#</th><th>Campaign</th><th class="right">Revenue</th><th class="right">Orders</th><th class="right">Rev / Recipient</th><th class="right">CTOR</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><span class="rank-num top3">1</span></td><td><div class="campaign-name">35% Off V-Neck Shirt <span class="muted" style="font-weight:400;font-size:12px;">- May 5</span></div></td><td class="right"><span class="rev-tag">$1,629</span></td><td class="right metric">14</td><td class="right metric">$0.12</td><td class="right metric good">1.58%</td></tr>
-        <tr><td><span class="rank-num top3">2</span></td><td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson) <span class="muted" style="font-weight:400;font-size:12px;">- May 15</span></div></td><td class="right"><span class="rev-tag">$1,383</span></td><td class="right metric">13</td><td class="right metric">$0.10</td><td class="right metric good">1.24%</td></tr>
-        <tr><td><span class="rank-num top3">3</span></td><td><div class="campaign-name">Product Highlight: Pajama Shorts <span class="muted" style="font-weight:400;font-size:12px;">- May 12</span></div></td><td class="right"><span class="rev-tag">$1,323</span></td><td class="right metric">9</td><td class="right metric rpr-high">$0.19</td><td class="right metric good">2.02%</td></tr>
-        <tr><td><span class="rank-num">4</span></td><td><div class="campaign-name">Limited Edition Boxer Briefs Reminder <span class="muted" style="font-weight:400;font-size:12px;">- May 8</span></div></td><td class="right"><span class="rev-tag">$1,323</span></td><td class="right metric">8</td><td class="right metric">$0.10</td><td class="right metric warn">0.76%</td></tr>
-        <tr><td><span class="rank-num">5</span></td><td><div class="campaign-name">FREE Pair On Us <span class="muted" style="font-weight:400;font-size:12px;">- May 25</span></div></td><td class="right"><span class="rev-tag">$1,212</span></td><td class="right metric">8</td><td class="right metric">$0.09</td><td class="right metric warn">0.93%</td></tr>
-        <tr><td><span class="rank-num">6</span></td><td><div class="campaign-name">What made you curious about hemp? <span class="muted" style="font-weight:400;font-size:12px;">- May 29</span></div></td><td class="right"><span class="rev-tag">$984</span></td><td class="right metric">6</td><td class="right metric">$0.05</td><td class="right metric warn">0.92%</td></tr>
-        <tr><td><span class="rank-num">7</span></td><td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief <span class="muted" style="font-weight:400;font-size:12px;">- May 19</span></div></td><td class="right"><span class="rev-tag">$732</span></td><td class="right metric">6</td><td class="right metric">$0.05</td><td class="right metric good">2.01%</td></tr>
-        <tr><td><span class="rank-num">8</span></td><td><div class="campaign-name">Your Boys Deserve Better Than Synthetic <span class="muted" style="font-weight:400;font-size:12px;">- May 2</span></div></td><td class="right"><span class="rev-tag">$643</span></td><td class="right metric">6</td><td class="right metric">$0.13</td><td class="right metric good">1.26%</td></tr>
-        <tr><td><span class="rank-num">9</span></td><td><div class="campaign-name">Perfect Pair: Shirts + Pajamas <span class="muted" style="font-weight:400;font-size:12px;">- May 22</span></div></td><td class="right"><span class="rev-tag">$588</span></td><td class="right metric">7</td><td class="right metric">$0.05</td><td class="right metric good">1.16%</td></tr>
-        <tr><td><span class="rank-num">10</span></td><td><div class="campaign-name">Wallet Balance Reminder <span class="muted" style="font-weight:400;font-size:12px;">- May 27</span></div></td><td class="right"><span class="rev-tag">$302</span></td><td class="right metric">3</td><td class="right metric rpr-high">$0.34 (highest RPR)</td><td class="right metric good">3.71%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="insight-band">
-    <strong>Revenue per recipient (RPR)</strong> shows how efficiently each campaign converts its audience into revenue. The <strong>Wallet Balance Reminder</strong> ranks last in total revenue but earns <strong>$0.34 per recipient</strong> - highest of any campaign. Reaching more subscribers with a rewards balance is a fast path to more revenue from campaigns.
-  </div>
-  <div class="section-label">Flow Revenue - Top Performers</div>
-  <div class="flow-grid">
-    <div class="flow-card top"><div class="flow-rank">1</div><div class="flow-info"><div class="flow-name">Welcome Series</div><div class="flow-meta">38.3% open - 3.65% click</div></div><div class="flow-rev-block"><div class="flow-rev">$20,889</div><div class="flow-orders">177 orders</div></div></div>
-    <div class="flow-card"><div class="flow-rank">2</div><div class="flow-info"><div class="flow-name">Cart Abandonment</div><div class="flow-meta">42.3% open - 4.80% click</div></div><div class="flow-rev-block"><div class="flow-rev">$2,381</div><div class="flow-orders">21 orders</div></div></div>
-    <div class="flow-card"><div class="flow-rank">3</div><div class="flow-info"><div class="flow-name">Post Purchase Flow 2</div><div class="flow-meta">47.5% open - 2.96% click</div></div><div class="flow-rev-block"><div class="flow-rev">$1,129</div><div class="flow-orders">10 orders</div></div></div>
-    <div class="flow-card"><div class="flow-rank">4</div><div class="flow-info"><div class="flow-name">Cross Sell</div><div class="flow-meta">49.7% open - 2.28% click</div></div><div class="flow-rev-block"><div class="flow-rev">$980</div><div class="flow-orders">11 orders</div></div></div>
-    <div class="flow-card"><div class="flow-rank">5</div><div class="flow-info"><div class="flow-name">Checkout Abandonment</div><div class="flow-meta">59.0% open - 6.18% click</div></div><div class="flow-rev-block"><div class="flow-rev">$819</div><div class="flow-orders">7 orders</div></div></div>
-    <div class="flow-card"><div class="flow-rank">6</div><div class="flow-info"><div class="flow-name">Out For Delivery</div><div class="flow-meta">50.5% open - 10.33% click</div></div><div class="flow-rev-block"><div class="flow-rev">$727</div><div class="flow-orders">5 orders</div></div></div>
-  </div>
-  <div class="section-label">Email Health</div>
-  <div class="health-grid">
-    <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Deliverability is excellent</div><div class="health-body">All 10 campaigns landed at 99.9%+ delivery. No inbox placement issues. Sender reputation is in great shape.</div></div></div>
-    <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Open rates are strong</div><div class="health-body">Average open rate across all campaigns was 63.5% - well above industry average. The engaged list strategy is working.</div></div></div>
-    <div class="health-card"><div class="health-icon">&#9888;</div><div><div class="health-heading">Click rates have room to improve</div><div class="health-body">7 of 10 campaigns were below the 1% click target. Opens are strong - the opportunity is converting that interest into clicks.</div></div></div>
-    <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Flows driving 74% of email revenue</div><div class="health-body">Welcome Series alone brought in $20,889 - 54% of all email revenue for the month. Automations are the backbone.</div></div></div>
-  </div>
-  <div class="section-label">What to Watch in June</div>
-  <div class="watch-list">
-    <div class="watch-item priority"><div class="watch-heading">Click rates - testing stronger CTAs and simpler layouts</div><div class="watch-body">Opens are consistently 60%+, but most campaigns aren't converting that to clicks. In June we'll test higher CTA placement, fewer distractions in the email body, and stronger call-to-action copy to close this gap.</div></div>
-    <div class="watch-item"><div class="watch-heading">Wallet Balance segment - grow the audience</div><div class="watch-body">The Wallet Balance Reminder earned $0.34 per recipient - the highest RPR of the month. The list is only 898 people. Growing this segment and building a dedicated flow for reward earners is a low-effort, high-return opportunity.</div></div>
-    <div class="watch-item"><div class="watch-heading">Re-engagement flow - refresh underway</div><div class="watch-body">The Re-engagement 30D flow is underperforming against benchmarks. We'll update subject lines and copy to give lapsed subscribers a better reason to come back - with a soft offer to drive action.</div></div>
-  </div>
-  <div class="footer">
-    <div class="footer-left"><div class="footer-brand">Prepared by Elevatewel</div><div>Email strategy &amp; Klaviyo management - June 2026</div></div>
-    <div class="footer-right">Data source: Klaviyo<br>Attribution: 5-day click + 1-day open</div>
+
+    <div class="attr-card">
+      <div class="attr-top">
+        <span class="attr-heading">Email Revenue Split</span>
+        <span class="attr-note">Flows vs. Campaigns - 5-day attribution window</span>
+      </div>
+      <div class="attr-bar">
+        <div class="attr-flows"></div>
+        <div class="attr-campaigns"></div>
+      </div>
+      <div class="attr-legend">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:var(--green);"></div>
+          Automated Flows <span class="legend-val">$28,640 - 73.9%</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#A2C4AF;"></div>
+          Campaigns <span class="legend-val">$10,118 - 26.1%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Month at a Glance</div>
+    <div class="quick-stats">
+      <div class="stat-pill"><strong>10</strong> campaigns sent</div>
+      <div class="stat-pill"><strong>110,397</strong> emails delivered</div>
+      <div class="stat-pill"><strong>63%</strong> avg open rate</div>
+      <div class="stat-pill"><strong>17</strong> active flows</div>
+      <div class="stat-pill"><strong>239</strong> flow orders</div>
+      <div class="stat-pill" style="border-color:var(--green);color:var(--green);"><strong>100%</strong> delivery rate &#10003;</div>
+    </div>
+
+    <div class="section-label">Campaign Engagement</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Campaign</th>
+            <th>Audience</th>
+            <th class="right">Recipients</th>
+            <th class="right">Open Rate</th>
+            <th class="right">Click Rate</th>
+            <th class="center">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="muted">May 2</td><td><div class="campaign-name">Your Boys Deserve Better Than Synthetic</div></td><td class="muted">Engaged 20D + Clicked</td><td class="right metric">4,899</td><td class="right metric good">76.3%</td><td class="right metric warn">0.96%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
+          <tr><td class="muted">May 5</td><td><div class="campaign-name">35% Off V-Neck Shirt</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,393</td><td class="right metric good">57.4%</td><td class="right metric warn">0.90%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
+          <tr><td class="muted">May 8</td><td><div class="campaign-name">Limited Edition Boxer Briefs Reminder</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,363</td><td class="right metric good">67.0%</td><td class="right metric flag">0.51%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
+          <tr><td class="muted">May 12</td><td><div class="campaign-name">Product Highlight: Pajama Shorts</div></td><td class="muted">Engaged 90D + Clicked</td><td class="right metric">6,836</td><td class="right metric good">62.4%</td><td class="right metric good">1.26%</td><td class="center"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
+          <tr><td class="muted">May 15</td><td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson)</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,340</td><td class="right metric good">67.0%</td><td class="right metric warn">0.83%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
+          <tr><td class="muted">May 19</td><td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,347</td><td class="right metric good">67.9%</td><td class="right metric good">1.36%</td><td class="center"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
+          <tr><td class="muted">May 22</td><td><div class="campaign-name">Perfect Pair: Shirts + Pajamas</div></td><td class="muted">Engaged 60D</td><td class="right metric">12,545</td><td class="right metric good">70.9%</td><td class="right metric warn">0.82%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
+          <tr><td class="muted">May 25</td><td><div class="campaign-name">FREE Pair On Us</div></td><td class="muted">Engaged 90D</td><td class="right metric">13,262</td><td class="right metric good">68.2%</td><td class="right metric warn">0.63%</td><td class="center"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
+          <tr><td class="muted">May 27</td><td><div class="campaign-name">Wallet Balance Reminder</div></td><td class="muted">With Rewards Balance</td><td class="right metric">898</td><td class="right metric good">47.9%</td><td class="right metric good">1.78%</td><td class="center"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
+          <tr><td class="muted">May 29</td><td><div class="campaign-name">What made you curious about hemp?</div></td><td class="muted">Buyer + Engaged 180D</td><td class="right metric">18,514</td><td class="right metric good">49.7%</td><td class="right metric flag">0.46%</td><td class="center"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Open rate target &gt;35% &nbsp;&middot;&nbsp; Click rate target &gt;1% &nbsp;&middot;&nbsp; All 10 campaigns delivered at 99.9%+</div>
+
+    <div class="section-label">Campaign Revenue - Ranked by Revenue</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40px;">#</th>
+            <th>Campaign</th>
+            <th class="right">Revenue</th>
+            <th class="right">Orders</th>
+            <th class="right">Rev / Recipient</th>
+            <th class="right">CTOR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="rank-num top3">1</span></td><td><div class="campaign-name">35% Off V-Neck Shirt <span class="muted" style="font-weight:400;font-size:12px;">- May 5</span></div></td><td class="right"><span class="rev-tag">$1,629</span></td><td class="right metric">14</td><td class="right metric">$0.12</td><td class="right metric good">1.58%</td></tr>
+          <tr><td><span class="rank-num top3">2</span></td><td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson) <span class="muted" style="font-weight:400;font-size:12px;">- May 15</span></div></td><td class="right"><span class="rev-tag">$1,383</span></td><td class="right metric">13</td><td class="right metric">$0.10</td><td class="right metric good">1.24%</td></tr>
+          <tr><td><span class="rank-num top3">3</span></td><td><div class="campaign-name">Product Highlight: Pajama Shorts <span class="muted" style="font-weight:400;font-size:12px;">- May 12</span></div></td><td class="right"><span class="rev-tag">$1,323</span></td><td class="right metric">9</td><td class="right metric rpr-high">$0.19</td><td class="right metric good">2.02%</td></tr>
+          <tr><td><span class="rank-num">4</span></td><td><div class="campaign-name">Limited Edition Boxer Briefs Reminder <span class="muted" style="font-weight:400;font-size:12px;">- May 8</span></div></td><td class="right"><span class="rev-tag">$1,323</span></td><td class="right metric">8</td><td class="right metric">$0.10</td><td class="right metric warn">0.76%</td></tr>
+          <tr><td><span class="rank-num">5</span></td><td><div class="campaign-name">FREE Pair On Us <span class="muted" style="font-weight:400;font-size:12px;">- May 25</span></div></td><td class="right"><span class="rev-tag">$1,212</span></td><td class="right metric">8</td><td class="right metric">$0.09</td><td class="right metric warn">0.93%</td></tr>
+          <tr><td><span class="rank-num">6</span></td><td><div class="campaign-name">What made you curious about hemp? <span class="muted" style="font-weight:400;font-size:12px;">- May 29</span></div></td><td class="right"><span class="rev-tag">$984</span></td><td class="right metric">6</td><td class="right metric">$0.05</td><td class="right metric warn">0.92%</td></tr>
+          <tr><td><span class="rank-num">7</span></td><td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief <span class="muted" style="font-weight:400;font-size:12px;">- May 19</span></div></td><td class="right"><span class="rev-tag">$732</span></td><td class="right metric">6</td><td class="right metric">$0.05</td><td class="right metric good">2.01%</td></tr>
+          <tr><td><span class="rank-num">8</span></td><td><div class="campaign-name">Your Boys Deserve Better Than Synthetic <span class="muted" style="font-weight:400;font-size:12px;">- May 2</span></div></td><td class="right"><span class="rev-tag">$643</span></td><td class="right metric">6</td><td class="right metric">$0.13</td><td class="right metric good">1.26%</td></tr>
+          <tr><td><span class="rank-num">9</span></td><td><div class="campaign-name">Perfect Pair: Shirts + Pajamas <span class="muted" style="font-weight:400;font-size:12px;">- May 22</span></div></td><td class="right"><span class="rev-tag">$588</span></td><td class="right metric">7</td><td class="right metric">$0.05</td><td class="right metric good">1.16%</td></tr>
+          <tr><td><span class="rank-num">10</span></td><td><div class="campaign-name">Wallet Balance Reminder <span class="muted" style="font-weight:400;font-size:12px;">- May 27</span></div></td><td class="right"><span class="rev-tag">$302</span></td><td class="right metric">3</td><td class="right metric rpr-high">$0.34 &#8593;</td><td class="right metric good">3.71%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="insight-band">
+      <strong>Revenue per recipient (RPR)</strong> shows how efficiently each campaign converts its audience into revenue. The <strong>Wallet Balance Reminder</strong> ranks last in total revenue but earns <strong>$0.34 per recipient</strong> - highest of any campaign. Reaching more subscribers with a rewards balance is a fast path to more revenue from campaigns.
+    </div>
+
+    <div class="section-label">Flow Revenue - Top Performers</div>
+    <div class="flow-grid">
+      <div class="flow-card top"><div class="flow-rank">1</div><div class="flow-info"><div class="flow-name">Welcome Series</div><div class="flow-meta">38.3% open - 3.65% click</div></div><div class="flow-rev-block"><div class="flow-rev">$20,889</div><div class="flow-orders">177 orders</div></div></div>
+      <div class="flow-card"><div class="flow-rank">2</div><div class="flow-info"><div class="flow-name">Cart Abandonment</div><div class="flow-meta">42.3% open - 4.80% click</div></div><div class="flow-rev-block"><div class="flow-rev">$2,381</div><div class="flow-orders">21 orders</div></div></div>
+      <div class="flow-card"><div class="flow-rank">3</div><div class="flow-info"><div class="flow-name">Post Purchase Flow 2</div><div class="flow-meta">47.5% open - 2.96% click</div></div><div class="flow-rev-block"><div class="flow-rev">$1,129</div><div class="flow-orders">10 orders</div></div></div>
+      <div class="flow-card"><div class="flow-rank">4</div><div class="flow-info"><div class="flow-name">Cross Sell</div><div class="flow-meta">49.7% open - 2.28% click</div></div><div class="flow-rev-block"><div class="flow-rev">$980</div><div class="flow-orders">11 orders</div></div></div>
+      <div class="flow-card"><div class="flow-rank">5</div><div class="flow-info"><div class="flow-name">Checkout Abandonment</div><div class="flow-meta">59.0% open - 6.18% click</div></div><div class="flow-rev-block"><div class="flow-rev">$819</div><div class="flow-orders">7 orders</div></div></div>
+      <div class="flow-card"><div class="flow-rank">6</div><div class="flow-info"><div class="flow-name">Out For Delivery</div><div class="flow-meta">50.5% open - 10.33% click</div></div><div class="flow-rev-block"><div class="flow-rev">$727</div><div class="flow-orders">5 orders</div></div></div>
+    </div>
+
+    <div class="section-label">Email Health</div>
+    <div class="health-grid">
+      <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Deliverability is excellent</div><div class="health-body">All 10 campaigns landed at 99.9%+ delivery. No inbox placement issues. Sender reputation is in great shape.</div></div></div>
+      <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Open rates are strong</div><div class="health-body">Average open rate across all campaigns was 63.5% - well above industry average. The engaged list strategy is working.</div></div></div>
+      <div class="health-card"><div class="health-icon">&#9888;</div><div><div class="health-heading">Click rates have room to improve</div><div class="health-body">7 of 10 campaigns were below the 1% click target. Opens are strong - the opportunity is converting that interest into clicks.</div></div></div>
+      <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Flows driving 74% of email revenue</div><div class="health-body">Welcome Series alone brought in $20,889 - 54% of all email revenue for the month. Automations are the backbone.</div></div></div>
+    </div>
+
+    <div class="section-label">What to Watch in June</div>
+    <div class="watch-list">
+      <div class="watch-item priority"><div class="watch-heading">Click rates - testing stronger CTAs and simpler layouts</div><div class="watch-body">Opens are consistently 60%+, but most campaigns aren't converting that to clicks. In June we'll test higher CTA placement, fewer distractions in the email body, and stronger call-to-action copy to close this gap.</div></div>
+      <div class="watch-item"><div class="watch-heading">Wallet Balance segment - grow the audience</div><div class="watch-body">The Wallet Balance Reminder earned $0.34 per recipient - the highest RPR of the month. The list is only 898 people. Growing this segment and building a dedicated flow for reward earners is a low-effort, high-return opportunity.</div></div>
+      <div class="watch-item"><div class="watch-heading">Re-engagement flow - refresh underway</div><div class="watch-body">The Re-engagement 30D flow is underperforming against benchmarks. We'll update subject lines and copy to give lapsed subscribers a better reason to come back - with a soft offer to drive action.</div></div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left"><div class="footer-brand">Prepared by Elevatewel</div><div>Email strategy &amp; Klaviyo management - June 2026</div></div>
+      <div class="footer-right">Data source: Klaviyo<br>Attribution: 5-day click + 1-day open</div>
+    </div>
+
   </div>
 </div>
+
+<!-- ===================== JUN 2026 ===================== -->
+<div id="jun2026" class="tab-content">
+  <div class="coming-soon-panel">
+    <div class="coming-soon-icon">&#128197;</div>
+    <div class="coming-soon-title">June 2026 report is on its way</div>
+    <div class="coming-soon-sub">The June audit runs automatically on July 6. This tab will update with the full month's campaign and flow data once it's published.</div>
+    <span class="coming-soon-date">Publishes July 6, 2026</span>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = this.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+      this.classList.add('active');
+      var el = document.getElementById(target);
+      if (el) el.classList.add('active');
+    });
+  });
+</script>
+
 </body>
 </html>
