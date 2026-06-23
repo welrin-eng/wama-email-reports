@@ -12,16 +12,12 @@
       --red-light:#FDECEA;--text:#27271F;--muted:#6A6A5A;--border:#DDD5C8;--row-alt:#FDFCF9;
     }
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;}
-
-    /* Header */
     .header{background:var(--dark);padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;}
     .header-left{display:flex;align-items:baseline;gap:14px;}
     .header-brand{color:#fff;font-size:18px;font-weight:700;letter-spacing:-.3px;}
     .header-divider{color:rgba(255,255,255,.25);font-size:16px;}
     .header-title{color:rgba(255,255,255,.65);font-size:14px;}
     .header-badge{background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;}
-
-    /* Tab navigation */
     .tab-nav-wrapper{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding:0 48px;}
     .tab-nav{display:flex;gap:0;max-width:1060px;margin:0 auto;}
     .tab-btn{background:none;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,.45);font-size:13px;font-weight:500;padding:12px 18px;cursor:pointer;transition:color .15s,border-color .15s;letter-spacing:.1px;font-family:inherit;}
@@ -29,24 +25,14 @@
     .tab-btn.active{color:#fff;border-bottom-color:var(--green-mid);font-weight:600;}
     .tab-btn.coming-soon-tab{color:rgba(255,255,255,.25);cursor:default;}
     .tab-btn.coming-soon-tab:hover{color:rgba(255,255,255,.35);}
-
-    /* Tab content */
     .tab-content{display:none;}
     .tab-content.active{display:block;}
-
-    /* Container */
     .container{max-width:1060px;margin:0 auto;padding:40px 48px 64px;}
-
-    /* Section labels */
     .section-label{font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;margin-top:44px;}
     .section-label:first-child{margin-top:0;}
-
-    /* Month summary */
     .month-summary-card{background:var(--dark);border-radius:12px;padding:24px 28px;}
     .month-summary-text{font-size:14px;color:rgba(255,255,255,.7);line-height:1.8;}
     .month-summary-text strong{color:#fff;}
-
-    /* Revenue grid */
     .revenue-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:14px;}
     .rev-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 20px 20px;}
     .rev-card.hero{background:var(--dark);border-color:var(--dark);}
@@ -58,8 +44,6 @@
     .rev-card.hero .rev-sub{color:rgba(255,255,255,.45);}
     .rev-change{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:12px;font-weight:600;color:#5FAD7A;}
     .rev-card.hero .rev-change{color:#7CC994;}
-
-    /* Attribution bar */
     .attr-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;margin-top:14px;}
     .attr-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;}
     .attr-heading{font-size:13px;font-weight:600;}
@@ -71,19 +55,13 @@
     .legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
     .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
     .legend-val{font-weight:600;color:var(--text);margin-left:2px;}
-
-    /* Quick stats */
     .quick-stats{display:flex;gap:10px;flex-wrap:wrap;}
     .stat-pill{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:7px 16px;font-size:12.5px;display:flex;align-items:center;gap:7px;}
-
-    /* Wins list */
     .wins-list{display:flex;flex-direction:column;gap:8px;}
     .win-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:12px 16px;}
     .win-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--green);margin-bottom:3px;}
     .win-text{font-size:13px;line-height:1.55;}
     .fill-in-item{background:#FFFBEE;border:1.5px dashed #D4A847;border-radius:8px;padding:11px 15px;font-size:12.5px;color:#8B6914;font-style:italic;}
-
-    /* Table */
     .table-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
     table{width:100%;border-collapse:collapse;}
     th{text-align:left;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);padding:13px 18px;border-bottom:1px solid var(--border);background:#FAFAF7;}
@@ -97,18 +75,16 @@
     td.vmid{vertical-align:middle;}
     .campaign-name{font-weight:500;color:var(--text);}
     .next-action-text{font-size:12px;color:var(--muted);line-height:1.5;}
-
-    /* Tags */
     .tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px;white-space:nowrap;}
     .tag-green{background:var(--green-light);color:#2C5C3A;}
     .tag-amber{background:var(--amber-light);color:var(--amber);}
     .tag-red{background:var(--red-light);color:var(--red);}
+    .tag-muted{background:#EDEAE4;color:var(--muted);}
     .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
     .dot-g{background:var(--green);}
     .dot-a{background:#D4884A;}
     .dot-r{background:var(--red);}
-
-    /* Metrics */
+    .dot-m{background:var(--muted);}
     .metric{font-variant-numeric:tabular-nums;}
     .metric.good{color:var(--green);font-weight:500;}
     .metric.warn{color:var(--amber);font-weight:600;}
@@ -117,8 +93,6 @@
     .rank-num.top3{color:#B8A48A;}
     .rev-tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--green);font-variant-numeric:tabular-nums;}
     .rpr-high{color:var(--green);font-weight:600;}
-
-    /* Flow top grid */
     .flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
     .flow-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;}
     .flow-card.top{border-left:3px solid var(--green);}
@@ -129,22 +103,16 @@
     .flow-rev-block{text-align:right;}
     .flow-rev{font-size:16px;font-weight:700;color:var(--green);letter-spacing:-.3px;}
     .flow-orders{font-size:11px;color:var(--muted);margin-top:1px;}
-
-    /* Health grid */
     .health-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
     .health-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;gap:14px;}
     .health-icon{font-size:20px;line-height:1;margin-top:1px;flex-shrink:0;}
     .health-heading{font-size:13px;font-weight:600;margin-bottom:4px;}
     .health-body{font-size:12.5px;color:var(--muted);line-height:1.55;}
-
-    /* Watch list */
     .watch-list{display:flex;flex-direction:column;gap:10px;}
     .watch-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:0 10px 10px 0;padding:14px 18px;}
     .watch-item.priority{border-left-color:var(--red);}
     .watch-heading{font-size:13px;font-weight:600;margin-bottom:3px;}
     .watch-body{font-size:12.5px;color:var(--muted);line-height:1.5;}
-
-    /* Testing section */
     .test-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
     .test-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;}
     .test-card.empty{background:var(--bg);border-style:dashed;}
@@ -153,20 +121,14 @@
     .test-body{font-size:12px;color:var(--muted);line-height:1.6;}
     .test-hypothesis{font-size:12px;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px solid var(--border);line-height:1.5;}
     .test-hypothesis strong{color:var(--text);}
-
-    /* List health */
     .list-health-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
     .lh-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;}
     .lh-label{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:8px;}
     .lh-value{font-size:22px;font-weight:700;letter-spacing:-.5px;color:var(--text);line-height:1;}
     .lh-sub{font-size:11.5px;color:var(--muted);margin-top:5px;}
     .lh-tbc{font-size:13px;color:var(--border);font-weight:600;margin-top:4px;font-style:italic;}
-
-    /* Insight band */
     .insight-band{background:var(--green-light);border:1px solid #C0D9C8;border-radius:10px;padding:13px 18px;margin-top:14px;font-size:12.5px;color:#2A4F35;line-height:1.55;}
     .insight-band strong{font-weight:700;}
-
-    /* Steal from competitors */
     .steal-list{display:flex;flex-direction:column;gap:14px;}
     .steal-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;}
     .steal-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
@@ -177,14 +139,10 @@
     .steal-wama-box{background:var(--green-light);border:1px solid #C0D9C8;border-radius:8px;padding:11px 14px;margin-top:12px;}
     .steal-wama-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--green);margin-bottom:4px;}
     .steal-wama-text{font-size:12.5px;color:#2A4F35;line-height:1.55;}
-
-    /* Footer */
     .footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
     .footer-left{font-size:12px;color:var(--muted);line-height:1.6;}
     .footer-brand{font-weight:600;color:var(--text);}
     .footer-right{font-size:12px;color:var(--muted);text-align:right;}
-
-    /* Coming soon */
     .coming-soon-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px;text-align:center;padding:60px 48px;}
     .coming-soon-icon{font-size:40px;margin-bottom:20px;opacity:.4;}
     .coming-soon-title{font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;}
@@ -193,7 +151,6 @@
   </style>
 </head>
 <body>
-
 <header class="header">
   <div class="header-left">
     <span class="header-brand">WAMA Underwear</span>
@@ -202,27 +159,20 @@
   </div>
   <span class="header-badge">2026</span>
 </header>
-
 <div class="tab-nav-wrapper">
   <nav class="tab-nav">
     <button class="tab-btn active" data-tab="may2026">May 2026</button>
     <button class="tab-btn coming-soon-tab" data-tab="jun2026" title="Report publishes July 6">Jun 2026</button>
   </nav>
 </div>
-
-<!-- ===================== MAY 2026 ===================== -->
 <div id="may2026" class="tab-content active">
   <div class="container">
-
-    <!-- 1. MONTH SUMMARY -->
     <div class="section-label">Month Summary</div>
     <div class="month-summary-card">
       <div class="month-summary-text">
         <strong>May was the strongest email month on record.</strong> Email attributed revenue hit $38,758 - up 136% on May 2025 - with total store revenue at $89,693, up 96% year on year. Flows did the heavy lifting at 73.9%, powered almost entirely by a Welcome Series that generated $20,889 on its own. Campaigns performed well on opens (63% average, nearly double the industry benchmark) but click rates are the clear gap - 7 of 10 campaigns fell below the 1% target. That's the primary focus for June. <strong>Deliverability held at 100%</strong> - every campaign landed at 99.9%+ with no inbox placement issues.
       </div>
     </div>
-
-    <!-- 2. REVENUE OVERVIEW -->
     <div class="section-label">Revenue Overview</div>
     <div class="revenue-grid">
       <div class="rev-card hero">
@@ -262,8 +212,6 @@
         <div class="legend-item"><div class="legend-dot" style="background:#A2C4AF;"></div>Campaigns <span class="legend-val">$10,118 - 26.1%</span></div>
       </div>
     </div>
-
-    <!-- 3. MONTH AT A GLANCE -->
     <div class="section-label">Month at a Glance</div>
     <div class="quick-stats">
       <div class="stat-pill"><strong>10</strong>&nbsp;campaigns sent</div>
@@ -273,8 +221,6 @@
       <div class="stat-pill"><strong>239</strong>&nbsp;flow orders</div>
       <div class="stat-pill" style="border-color:var(--green);color:var(--green);"><strong>100%</strong>&nbsp;delivery rate &#10003;</div>
     </div>
-
-    <!-- 4. WINS WE DROVE -->
     <div class="section-label">Wins We Drove</div>
     <div class="wins-list">
       <div class="win-item">
@@ -292,20 +238,12 @@
       <div class="fill-in-item">&#9998; Flow updates or optimisations made in May - add here before publishing</div>
       <div class="fill-in-item">&#9998; New segments, tests, or builds completed in May - add here before publishing</div>
     </div>
-
-    <!-- 5. CAMPAIGN ENGAGEMENT -->
     <div class="section-label">Campaign Engagement</div>
     <div class="table-card">
       <table>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Campaign</th>
-            <th>Audience</th>
-            <th class="right">Recipients</th>
-            <th class="right">Open Rate</th>
-            <th class="right">Click Rate</th>
-            <th class="center">Status</th>
+            <th>Date</th><th>Campaign</th><th>Audience</th><th class="right">Recipients</th><th class="right">Open Rate</th><th class="right">Click Rate</th><th class="center">Status</th>
           </tr>
         </thead>
         <tbody>
@@ -323,20 +261,11 @@
       </table>
     </div>
     <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Open rate target &gt;35% &nbsp;&middot;&nbsp; Click rate target &gt;1% &nbsp;&middot;&nbsp; All 10 campaigns delivered at 99.9%+</div>
-
-    <!-- 6. CAMPAIGN REVENUE -->
     <div class="section-label">Campaign Revenue - Ranked by Revenue</div>
     <div class="table-card">
       <table>
         <thead>
-          <tr>
-            <th style="width:40px;">#</th>
-            <th>Campaign</th>
-            <th class="right">Revenue</th>
-            <th class="right">Orders</th>
-            <th class="right">Rev / Recipient</th>
-            <th class="right">CTOR</th>
-          </tr>
+          <tr><th style="width:40px;">#</th><th>Campaign</th><th class="right">Revenue</th><th class="right">Orders</th><th class="right">Rev / Recipient</th><th class="right">CTOR</th></tr>
         </thead>
         <tbody>
           <tr><td class="vmid"><span class="rank-num top3">1</span></td><td><div class="campaign-name">35% Off V-Neck Shirt <span class="muted" style="font-weight:400;font-size:12px;">- May 5</span></div></td><td class="right vmid"><span class="rev-tag">$1,629</span></td><td class="right metric vmid">14</td><td class="right metric vmid">$0.12</td><td class="right metric good vmid">1.58%</td></tr>
@@ -352,11 +281,7 @@
         </tbody>
       </table>
     </div>
-    <div class="insight-band">
-      <strong>Revenue per recipient (RPR)</strong> shows how efficiently each campaign converts its audience. The <strong>Wallet Balance Reminder</strong> ranks last in total revenue but earns <strong>$0.34 per recipient</strong> - the highest of any campaign this month. Growing this segment and building a dedicated rewards flow is the fastest low-effort revenue opportunity going into June.
-    </div>
-
-    <!-- 7. FLOW TOP PERFORMERS -->
+    <div class="insight-band"><strong>Revenue per recipient (RPR)</strong> shows how efficiently each campaign converts its audience. The <strong>Wallet Balance Reminder</strong> ranks last in total revenue but earns <strong>$0.34 per recipient</strong> - the highest of any campaign this month. Growing this segment and building a dedicated rewards flow is the fastest low-effort revenue opportunity going into June.</div>
     <div class="section-label">Flow Revenue - Top Performers</div>
     <div class="flow-grid">
       <div class="flow-card top"><div class="flow-rank">1</div><div class="flow-info"><div class="flow-name">Welcome Series</div><div class="flow-meta">38.3% open &nbsp;·&nbsp; 3.65% click</div></div><div class="flow-rev-block"><div class="flow-rev">$20,889</div><div class="flow-orders">177 orders</div></div></div>
@@ -366,90 +291,34 @@
       <div class="flow-card"><div class="flow-rank">5</div><div class="flow-info"><div class="flow-name">Checkout Abandonment</div><div class="flow-meta">59.0% open &nbsp;·&nbsp; 6.18% click</div></div><div class="flow-rev-block"><div class="flow-rev">$819</div><div class="flow-orders">7 orders</div></div></div>
       <div class="flow-card"><div class="flow-rank">6</div><div class="flow-info"><div class="flow-name">Out For Delivery</div><div class="flow-meta">50.5% open &nbsp;·&nbsp; 10.33% click</div></div><div class="flow-rev-block"><div class="flow-rev">$727</div><div class="flow-orders">5 orders</div></div></div>
     </div>
-
-    <!-- 8. FLOW HEALTH CHECK -->
-    <div class="section-label">Flow Health Check</div>
+    <div class="section-label">Flow Health Check - All 17 Flows</div>
     <div class="table-card">
       <table>
         <thead>
-          <tr>
-            <th>Flow</th>
-            <th class="right">Open Rate</th>
-            <th class="right">Click Rate</th>
-            <th class="right">Unsub Rate</th>
-            <th class="right">Spam Rate</th>
-            <th class="right">Revenue</th>
-            <th class="center">Status</th>
-            <th style="min-width:200px;">Next Action</th>
-          </tr>
+          <tr><th>Flow</th><th class="right">Open Rate</th><th class="right">Click Rate</th><th class="right">Unsub Rate</th><th class="right">Spam Rate</th><th class="right">Revenue</th><th class="center">Status</th><th style="min-width:200px;">Next Action</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td><div class="campaign-name">Welcome Series</div></td>
-            <td class="right metric good vmid">38.3%</td>
-            <td class="right metric good vmid">3.65%</td>
-            <td class="right muted vmid">—</td>
-            <td class="right muted vmid">—</td>
-            <td class="right vmid"><span class="rev-tag">$20,889</span></td>
-            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
-            <td><div class="next-action-text">Monitor RPR per email. Emails 4+ may benefit from a stronger product push to extend the revenue tail.</div></td>
-          </tr>
-          <tr>
-            <td><div class="campaign-name">Cart Abandonment</div></td>
-            <td class="right metric good vmid">42.3%</td>
-            <td class="right metric good vmid">4.80%</td>
-            <td class="right muted vmid">—</td>
-            <td class="right muted vmid">—</td>
-            <td class="right vmid"><span class="rev-tag">$2,381</span></td>
-            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
-            <td><div class="next-action-text">High click rate signals strong intent. Test shortening the delay on email 1 to catch more subscribers at peak interest.</div></td>
-          </tr>
-          <tr>
-            <td><div class="campaign-name">Post Purchase Flow 2</div></td>
-            <td class="right metric good vmid">47.5%</td>
-            <td class="right metric good vmid">2.96%</td>
-            <td class="right muted vmid">—</td>
-            <td class="right muted vmid">—</td>
-            <td class="right vmid"><span class="rev-tag">$1,129</span></td>
-            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
-            <td><div class="next-action-text">Add a cross-sell email targeting Boxer Brief buyers with Pajama Shorts to lift AOV from repeat buyers.</div></td>
-          </tr>
-          <tr>
-            <td><div class="campaign-name">Cross Sell</div></td>
-            <td class="right metric good vmid">49.7%</td>
-            <td class="right metric good vmid">2.28%</td>
-            <td class="right muted vmid">—</td>
-            <td class="right muted vmid">—</td>
-            <td class="right vmid"><span class="rev-tag">$980</span></td>
-            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
-            <td><div class="next-action-text">Test dynamic product blocks personalised by purchase history to improve click-to-purchase rate.</div></td>
-          </tr>
-          <tr>
-            <td><div class="campaign-name">Checkout Abandonment</div></td>
-            <td class="right metric good vmid">59.0%</td>
-            <td class="right metric good vmid">6.18%</td>
-            <td class="right muted vmid">—</td>
-            <td class="right muted vmid">—</td>
-            <td class="right vmid"><span class="rev-tag">$819</span></td>
-            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
-            <td><div class="next-action-text">Strong performer. Test adding a second email for non-openers at 24h to recover more abandoned sessions.</div></td>
-          </tr>
-          <tr>
-            <td><div class="campaign-name">Out For Delivery</div></td>
-            <td class="right metric good vmid">50.5%</td>
-            <td class="right metric good vmid">10.33%</td>
-            <td class="right muted vmid">—</td>
-            <td class="right muted vmid">—</td>
-            <td class="right vmid"><span class="rev-tag">$727</span></td>
-            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
-            <td><div class="next-action-text">Highest click rate of all flows. Add a post-delivery review request email to build social proof and repeat purchase intent.</div></td>
-          </tr>
+          <tr><td><div class="campaign-name">Welcome Series</div></td><td class="right metric good vmid">38.3%</td><td class="right metric good vmid">3.65%</td><td class="right metric warn vmid">1.57%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$20,889</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Monitor RPR per email. Emails 4+ may benefit from a stronger product push to extend the revenue tail.</div></td></tr>
+          <tr><td><div class="campaign-name">Cart Abandonment</div></td><td class="right metric good vmid">42.3%</td><td class="right metric good vmid">4.80%</td><td class="right metric vmid">0.31%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$2,381</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">High click rate signals strong intent. Test shortening the delay on email 1 to catch more subscribers at peak interest.</div></td></tr>
+          <tr><td><div class="campaign-name">Post Purchase Flow 2</div></td><td class="right metric good vmid">47.5%</td><td class="right metric good vmid">2.96%</td><td class="right metric warn vmid">0.62%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$1,129</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Add a cross-sell email targeting Boxer Brief buyers with Pajama Shorts to lift AOV from repeat buyers.</div></td></tr>
+          <tr><td><div class="campaign-name">Cross Sell</div></td><td class="right metric good vmid">49.7%</td><td class="right metric good vmid">2.28%</td><td class="right metric vmid">0.42%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$980</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Test dynamic product blocks personalised by purchase history to improve click-to-purchase rate.</div></td></tr>
+          <tr><td><div class="campaign-name">Checkout Abandonment</div></td><td class="right metric good vmid">59.0%</td><td class="right metric good vmid">6.18%</td><td class="right metric warn vmid">0.56%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$819</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Strong performer. Test adding a second email for non-openers at 24h to recover more abandoned sessions.</div></td></tr>
+          <tr><td><div class="campaign-name">Out For Delivery</div></td><td class="right metric good vmid">50.5%</td><td class="right metric good vmid">10.33%</td><td class="right metric vmid">0.13%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$727</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Highest click rate of all flows. Add a post-delivery review request email to build social proof and repeat purchase intent.</div></td></tr>
+          <tr><td><div class="campaign-name">Winback</div></td><td class="right metric good vmid">44.7%</td><td class="right metric good vmid">2.43%</td><td class="right metric vmid">0.09%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$447</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Good engagement for a winback flow. Test a third email at 60 days with a plain text personal angle to push higher-intent lapsed buyers.</div></td></tr>
+          <tr><td><div class="campaign-name">Site Abandonment</div></td><td class="right metric good vmid">51.4%</td><td class="right metric good vmid">2.82%</td><td class="right metric warn vmid">1.41%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$371</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Unsubscribe rate is elevated (1.41%). Review the trigger - may be firing too broadly. Consider tightening to high-intent sessions only (2+ pages or 60s+ on site).</div></td></tr>
+          <tr><td><div class="campaign-name">Rise Store Credit</div></td><td class="right metric good vmid">51.3%</td><td class="right metric good vmid">2.40%</td><td class="right metric warn vmid">0.84%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$184</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Good engagement. Grow the rewards segment - the Wallet Balance campaign proved this audience converts at $0.34 RPR.</div></td></tr>
+          <tr><td><div class="campaign-name">Browse Abandonment</div></td><td class="right metric good vmid">80.0%</td><td class="right metric good vmid">23.9%</td><td class="right metric vmid">0.00%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$99</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Outstanding engagement. Only 260 recipients - the trigger is likely too narrow. Broaden the browse condition to capture more subscribers.</div></td></tr>
+          <tr><td><div class="campaign-name">Re-engagement 30D</div></td><td class="right metric flag vmid">19.1%</td><td class="right metric flag vmid">0.63%</td><td class="right metric warn vmid">1.06%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$40</span></td><td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td><td><div class="next-action-text"><strong>Both open and click below threshold.</strong> Full refresh needed - new subject lines, new copy, soft offer in email 2. Test plain text email 1.</div></td></tr>
+          <tr><td><div class="campaign-name">Failure to Launch</div></td><td class="right metric good vmid">55.7%</td><td class="right metric warn vmid">1.15%</td><td class="right metric warn vmid">0.66%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td><td><div class="next-action-text">Opens strong, clicks short. Simplify to one product and one CTA button - test removing all secondary links.</div></td></tr>
+          <tr><td><div class="campaign-name">PP Repeat Purchaser</div></td><td class="right metric good vmid">58.0%</td><td class="right metric good vmid">9.94%</td><td class="right metric vmid">0.00%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Exceptional click rate (9.94%). Verify attribution setup. Add specific product recommendation to convert high engagement into orders.</div></td></tr>
+          <tr><td><div class="campaign-name">Social Snowball PP</div></td><td class="right metric good vmid">50.9%</td><td class="right metric warn vmid">0.71%</td><td class="right metric warn vmid">1.78%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td><td><div class="next-action-text">Click rate and unsub rate both flagged. Test delaying trigger by 7-10 days post-delivery and simplifying the ask.</div></td></tr>
+          <tr><td><div class="campaign-name">First Purchase Anniversary</div></td><td class="right metric good vmid">79.3%</td><td class="right metric flag vmid">0.00%</td><td class="right metric vmid">0.00%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td><td><div class="next-action-text"><strong>Zero clicks despite 79% open rate.</strong> CTA link is likely broken or missing. Check in Klaviyo immediately.</div></td></tr>
+          <tr style="opacity:.65;"><td><div class="campaign-name">Never Engaged</div></td><td class="right metric muted vmid">2.2%</td><td class="right metric muted vmid">0.36%</td><td class="right metric muted vmid">0.73%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-muted"><span class="dot dot-m"></span>Sunset</span></td><td><div class="next-action-text">Hygiene flow - not benchmarked. Ensure subscribers are suppressed at exit.</div></td></tr>
+          <tr style="opacity:.65;"><td><div class="campaign-name">Re-engagement Welcome</div></td><td class="right metric muted vmid">2.2%</td><td class="right metric muted vmid">0.00%</td><td class="right metric muted vmid">1.10%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-muted"><span class="dot dot-m"></span>Sunset</span></td><td><div class="next-action-text">Sunset flow - confirm exit condition removes profiles from active sends after sequence completes.</div></td></tr>
         </tbody>
       </table>
     </div>
-    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Showing 6 flows with May revenue data. Full 17-flow health check including unsubscribe and spam rates available from the July 2026 report onwards. &nbsp;&middot;&nbsp; Thresholds: open &gt;35% &nbsp;·&nbsp; click &gt;1% &nbsp;·&nbsp; unsub &lt;0.30% &nbsp;·&nbsp; spam &lt;0.01%</div>
-
-    <!-- 9. EMAIL HEALTH -->
+    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">All 17 active flows tracked. Flow benchmarks: open &gt;25% - click &gt;1.5% - unsub watch at &gt;0.50% - Sunset flows not benchmarked. Spam rate data available from July 2026 onwards.</div>
     <div class="section-label">Email Health</div>
     <div class="health-grid">
       <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Deliverability is excellent</div><div class="health-body">All 10 campaigns landed at 99.9%+ delivery. No inbox placement issues. Sender reputation is in great shape.</div></div></div>
@@ -457,8 +326,6 @@
       <div class="health-card"><div class="health-icon">&#9888;</div><div><div class="health-heading">Click rates have room to improve</div><div class="health-body">7 of 10 campaigns fell below the 1% click target. Opens are strong - the opportunity is converting that interest into clicks.</div></div></div>
       <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Flows driving 74% of email revenue</div><div class="health-body">Welcome Series alone brought in $20,889 - 54% of all email revenue for the month. Automations are the backbone.</div></div></div>
     </div>
-
-    <!-- 10. WHAT WE'RE TESTING -->
     <div class="section-label">What We're Testing in June</div>
     <div class="test-grid">
       <div class="test-card">
@@ -467,98 +334,50 @@
         <div class="test-body">Moving the primary CTA above the fold in 3 June campaigns to test whether earlier visibility lifts click rate on emails that are already opening at 60%+.</div>
         <div class="test-hypothesis"><strong>Hypothesis:</strong> If subscribers are interested enough to open, removing scroll friction should increase clicks on high-open campaigns.</div>
       </div>
-      <div class="test-card empty">
-        <div class="fill-in-item">&#9998; Test 02 - add name, what you're testing, and hypothesis before publishing</div>
-      </div>
-      <div class="test-card empty">
-        <div class="fill-in-item">&#9998; Test 03 - add name, what you're testing, and hypothesis before publishing</div>
-      </div>
+      <div class="test-card empty"><div class="fill-in-item">&#9998; Test 02 - add name, what you're testing, and hypothesis before publishing</div></div>
+      <div class="test-card empty"><div class="fill-in-item">&#9998; Test 03 - add name, what you're testing, and hypothesis before publishing</div></div>
     </div>
-
-    <!-- 11. WHAT TO WATCH -->
     <div class="section-label">What to Watch in June</div>
     <div class="watch-list">
       <div class="watch-item priority"><div class="watch-heading">Click rates - testing stronger CTAs and simpler layouts</div><div class="watch-body">Opens are consistently above 60%, but most campaigns aren't converting that to clicks. In June we'll test higher CTA placement, fewer distractions in the email body, and stronger call-to-action copy to close this gap.</div></div>
       <div class="watch-item"><div class="watch-heading">Wallet Balance segment - grow the audience</div><div class="watch-body">The Wallet Balance Reminder earned $0.34 per recipient - the highest RPR of any campaign. The list is only 898 people. Growing this segment and building a dedicated rewards flow is a low-effort, high-return opportunity.</div></div>
       <div class="watch-item"><div class="watch-heading">Re-engagement flow - refresh underway</div><div class="watch-body">The Re-engagement 30D flow is underperforming against benchmarks. Updating subject lines and copy in June to give lapsed subscribers a better reason to come back, with a soft offer to drive action.</div></div>
     </div>
-
-    <!-- 12. LIST HEALTH -->
     <div class="section-label">List Health</div>
     <div class="list-health-grid">
-      <div class="lh-card">
-        <div class="lh-label">Engaged 90D Segment</div>
-        <div class="lh-value">~13,393</div>
-        <div class="lh-sub">Active send base in May</div>
-      </div>
-      <div class="lh-card">
-        <div class="lh-label">Avg Delivery Rate</div>
-        <div class="lh-value">100%</div>
-        <div class="lh-sub">Across all 10 campaigns</div>
-      </div>
-      <div class="lh-card">
-        <div class="lh-label">Total Campaign Sends</div>
-        <div class="lh-value">110,397</div>
-        <div class="lh-sub">Emails delivered in May</div>
-      </div>
-      <div class="lh-card">
-        <div class="lh-label">List Growth MoM</div>
-        <div class="lh-tbc">Available from July</div>
-        <div class="lh-sub">Tracked from June 2026</div>
-      </div>
+      <div class="lh-card"><div class="lh-label">Engaged 90D Segment</div><div class="lh-value">~13,393</div><div class="lh-sub">Active send base in May</div></div>
+      <div class="lh-card"><div class="lh-label">Avg Delivery Rate</div><div class="lh-value">100%</div><div class="lh-sub">Across all 10 campaigns</div></div>
+      <div class="lh-card"><div class="lh-label">Total Campaign Sends</div><div class="lh-value">110,397</div><div class="lh-sub">Emails delivered in May</div></div>
+      <div class="lh-card"><div class="lh-label">List Growth MoM</div><div class="lh-tbc">Available from July</div><div class="lh-sub">Tracked from June 2026</div></div>
     </div>
-
-    <!-- 13. STEAL FROM COMPETITORS -->
     <div class="section-label">Steal From Competitors</div>
     <div class="steal-list">
       <div class="steal-card">
-        <div class="steal-header">
-          <span class="steal-num">Steal 01</span>
-          <span class="steal-source">NADS</span>
-        </div>
-        <div class="steal-title" style="color:var(--muted);font-style:italic;">[Campaign angle or subject line observed this month]</div>
-        <div class="steal-body">[What they sent, when, the angle, and why it likely worked for their audience]</div>
-        <div class="steal-wama-box">
-          <div class="steal-wama-label">WAMA Version</div>
-          <div class="steal-wama-text">[How we adapt this - specific angle, segment, format, and suggested send window]</div>
-        </div>
+        <div class="steal-header"><span class="steal-num">Steal 01</span><span class="steal-source">NADS</span></div>
+        <div class="steal-title">Named bundle tiers - "Get a Bundle + Save Up to 40%"</div>
+        <div class="steal-body">NADS introduced three named bundle tiers in May: Tactical Set (2 pairs, 25% off), Heavy Hitter (3 pairs, 35% off), Kings Pack (4+ pairs, 40% off). Preview line: "Use that cash for beer." Volume-based savings, not urgency-based - disciplined offer management that lifts AOV without training the list to wait for flash sales. It was the only time they exceeded 15% off all month.</div>
+        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">A Boxer Briefs + Trunks bundle campaign with named tiers. "The Starter" (2 pairs, 10% off) - "The Full Week" (4 pairs, 15% off) - "The Upgrade" (6 pairs, 20% off). Send to Engaged 90D buyers who haven't purchased in 60+ days. AOV play - we've never run a structured bundle campaign.</div></div>
       </div>
       <div class="steal-card">
-        <div class="steal-header">
-          <span class="steal-num">Steal 02</span>
-          <span class="steal-source">Undrdog</span>
-        </div>
-        <div class="steal-title" style="color:var(--muted);font-style:italic;">[Campaign angle or subject line observed this month]</div>
-        <div class="steal-body">[What they sent, when, the angle, and why it likely worked for their audience]</div>
-        <div class="steal-wama-box">
-          <div class="steal-wama-label">WAMA Version</div>
-          <div class="steal-wama-text">[How we adapt this - specific angle, segment, format, and suggested send window]</div>
-        </div>
+        <div class="steal-header"><span class="steal-num">Steal 02</span><span class="steal-source">NADS</span></div>
+        <div class="steal-title">Quote-led subject line - "I Should Have Switched Years Ago"</div>
+        <div class="steal-body">NADS ran a customer testimonial email on May 16 using a direct customer quote as the subject line. No discount. No offer. The subject line did all the work - it reads as real, not polished. Quote-led subject lines consistently outperform brand-written ones because they feel like something a friend would say.</div>
+        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">Plain text email to Buyers + Engaged 180D. Pull a real customer review or Yotpo quote that echoes the "I should have switched" sentiment about hemp. Let the customer voice carry the email. No offer needed - social proof does the conversion work.</div></div>
       </div>
       <div class="steal-card">
-        <div class="steal-header">
-          <span class="steal-num">Steal 03</span>
-          <span class="steal-source">NADS / Undrdog</span>
-        </div>
-        <div class="steal-title" style="color:var(--muted);font-style:italic;">[Optional third idea]</div>
-        <div class="steal-body">[What they sent, when, the angle, and why it likely worked for their audience]</div>
-        <div class="steal-wama-box">
-          <div class="steal-wama-label">WAMA Version</div>
-          <div class="steal-wama-text">[How we adapt this - specific angle, segment, format, and suggested send window]</div>
-        </div>
+        <div class="steal-header"><span class="steal-num">Steal 03</span><span class="steal-source">NADS</span></div>
+        <div class="steal-title">Gift angle targeting women buyers - "slip them in his drawer and wait"</div>
+        <div class="steal-body">NADS ran a gifting-angle email on May 7 targeting women buying underwear for their partner or boyfriend. No discount. The copy framed the purchase as a quiet upgrade the guy wouldn't buy himself. It opens a gifting funnel without any promotional pressure.</div>
+        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">A gift-framing campaign targeting female buyers or subscribers who haven't purchased. "He won't buy hemp underwear himself. That's your move." No discount needed. Send around Father's Day, birthday, or as a non-seasonal angle.</div></div>
       </div>
     </div>
-    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">From July 2026 this section auto-populates from NADS and Undrdog weekly intel tracking. For May, fill in the top 1-3 steal ideas from the monthly competitor report before sharing with the client.</div>
-
+    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Source: WAMA Competitor Monthly Report - May 2026. NADS sent 20 emails in May (UndrDog tracking started June 2026 - no May data). From July 2026 this section auto-populates from weekly intel tracking files.</div>
     <div class="footer">
       <div class="footer-left"><div class="footer-brand">Prepared by Elevatewel</div><div>Email strategy &amp; Klaviyo management &nbsp;·&nbsp; June 2026</div></div>
       <div class="footer-right">Data source: Klaviyo &nbsp;·&nbsp; Attribution: 5-day click + 1-day open</div>
     </div>
-
   </div>
 </div>
-
-<!-- ===================== JUN 2026 ===================== -->
 <div id="jun2026" class="tab-content">
   <div class="coming-soon-panel">
     <div class="coming-soon-icon">&#128197;</div>
@@ -567,19 +386,8 @@
     <span class="coming-soon-date">Publishes July 6, 2026</span>
   </div>
 </div>
-
 <script>
-  document.querySelectorAll('.tab-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var target = this.dataset.tab;
-      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-      document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
-      this.classList.add('active');
-      var el = document.getElementById(target);
-      if (el) el.classList.add('active');
-    });
-  });
+  document.querySelectorAll('.tab-btn').forEach(function(btn){btn.addEventListener('click',function(){var t=this.dataset.tab;document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active');});this.classList.add('active');var el=document.getElementById(t);if(el)el.classList.add('active');});});
 </script>
-
 </body>
 </html>
