@@ -238,50 +238,101 @@
       <div class="fill-in-item">&#9998; Flow updates or optimisations made in May - add here before publishing</div>
       <div class="fill-in-item">&#9998; New segments, tests, or builds completed in May - add here before publishing</div>
     </div>
-    <div class="section-label">Campaign Engagement</div>
+    <div class="section-label">Campaign Performance</div>
     <div class="table-card">
       <table>
         <thead>
           <tr>
-            <th>Date</th><th>Campaign</th><th>Audience</th><th class="right">Recipients</th><th class="right">Open Rate</th><th class="right">Click Rate</th><th class="center">Status</th>
+            <th>Date</th>
+            <th>Campaign</th>
+            <th class="right">Recipients</th>
+            <th class="right">Open Rate</th>
+            <th class="right">Click Rate</th>
+            <th class="right">Revenue</th>
+            <th class="right">Orders</th>
+            <th class="right">RPR</th>
+            <th class="right">CTOR</th>
+            <th class="center">Status</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="muted vmid">May 2</td><td><div class="campaign-name">Your Boys Deserve Better Than Synthetic</div></td><td class="muted vmid">Engaged 20D + Clicked</td><td class="right metric vmid">4,899</td><td class="right metric good vmid">76.3%</td><td class="right metric warn vmid">0.96%</td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-          <tr><td class="muted vmid">May 5</td><td><div class="campaign-name">35% Off V-Neck Shirt</div></td><td class="muted vmid">Engaged 90D</td><td class="right metric vmid">13,393</td><td class="right metric good vmid">57.4%</td><td class="right metric warn vmid">0.90%</td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-          <tr><td class="muted vmid">May 8</td><td><div class="campaign-name">Limited Edition Boxer Briefs Reminder</div></td><td class="muted vmid">Engaged 90D</td><td class="right metric vmid">13,363</td><td class="right metric good vmid">67.0%</td><td class="right metric flag vmid">0.51%</td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-          <tr><td class="muted vmid">May 12</td><td><div class="campaign-name">Product Highlight: Pajama Shorts</div></td><td class="muted vmid">Engaged 90D + Clicked</td><td class="right metric vmid">6,836</td><td class="right metric good vmid">62.4%</td><td class="right metric good vmid">1.26%</td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
-          <tr><td class="muted vmid">May 15</td><td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson)</div></td><td class="muted vmid">Engaged 90D</td><td class="right metric vmid">13,340</td><td class="right metric good vmid">67.0%</td><td class="right metric warn vmid">0.83%</td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-          <tr><td class="muted vmid">May 19</td><td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief</div></td><td class="muted vmid">Engaged 90D</td><td class="right metric vmid">13,347</td><td class="right metric good vmid">67.9%</td><td class="right metric good vmid">1.36%</td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
-          <tr><td class="muted vmid">May 22</td><td><div class="campaign-name">Perfect Pair: Shirts + Pajamas</div></td><td class="muted vmid">Engaged 60D</td><td class="right metric vmid">12,545</td><td class="right metric good vmid">70.9%</td><td class="right metric warn vmid">0.82%</td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-          <tr><td class="muted vmid">May 25</td><td><div class="campaign-name">FREE Pair On Us</div></td><td class="muted vmid">Engaged 90D</td><td class="right metric vmid">13,262</td><td class="right metric good vmid">68.2%</td><td class="right metric warn vmid">0.63%</td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td></tr>
-          <tr><td class="muted vmid">May 27</td><td><div class="campaign-name">Wallet Balance Reminder</div></td><td class="muted vmid">With Rewards Balance</td><td class="right metric vmid">898</td><td class="right metric good vmid">47.9%</td><td class="right metric good vmid">1.78%</td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td></tr>
-          <tr><td class="muted vmid">May 29</td><td><div class="campaign-name">What made you curious about hemp?</div></td><td class="muted vmid">Buyer + Engaged 180D</td><td class="right metric vmid">18,514</td><td class="right metric good vmid">49.7%</td><td class="right metric flag vmid">0.46%</td><td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td></tr>
+          <tr>
+            <td class="muted vmid">May 2</td>
+            <td><div class="campaign-name">Your Boys Deserve Better Than Synthetic</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 20D + Clicked</div></td>
+            <td class="right metric vmid">4,899</td><td class="right metric good vmid">76.3%</td><td class="right metric warn vmid">0.96%</td>
+            <td class="right vmid"><span class="rev-tag">$643</span></td><td class="right metric vmid">6</td><td class="right metric vmid">$0.13</td><td class="right metric good vmid">1.26%</td>
+            <td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 5</td>
+            <td><div class="campaign-name">35% Off V-Neck Shirt</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 90D</div></td>
+            <td class="right metric vmid">13,393</td><td class="right metric good vmid">57.4%</td><td class="right metric warn vmid">0.90%</td>
+            <td class="right vmid"><span class="rev-tag">$1,629</span></td><td class="right metric vmid">14</td><td class="right metric vmid">$0.12</td><td class="right metric good vmid">1.58%</td>
+            <td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 8</td>
+            <td><div class="campaign-name">Limited Edition Boxer Briefs Reminder</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 90D</div></td>
+            <td class="right metric vmid">13,363</td><td class="right metric good vmid">67.0%</td><td class="right metric flag vmid">0.51%</td>
+            <td class="right vmid"><span class="rev-tag">$1,323</span></td><td class="right metric vmid">8</td><td class="right metric vmid">$0.10</td><td class="right metric warn vmid">0.76%</td>
+            <td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 12</td>
+            <td><div class="campaign-name">Product Highlight: Pajama Shorts</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 90D + Clicked</div></td>
+            <td class="right metric vmid">6,836</td><td class="right metric good vmid">62.4%</td><td class="right metric good vmid">1.26%</td>
+            <td class="right vmid"><span class="rev-tag">$1,323</span></td><td class="right metric vmid">9</td><td class="right metric rpr-high vmid">$0.19</td><td class="right metric good vmid">2.02%</td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 15</td>
+            <td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson)</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 90D</div></td>
+            <td class="right metric vmid">13,340</td><td class="right metric good vmid">67.0%</td><td class="right metric warn vmid">0.83%</td>
+            <td class="right vmid"><span class="rev-tag">$1,383</span></td><td class="right metric vmid">13</td><td class="right metric vmid">$0.10</td><td class="right metric good vmid">1.24%</td>
+            <td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 19</td>
+            <td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 90D</div></td>
+            <td class="right metric vmid">13,347</td><td class="right metric good vmid">67.9%</td><td class="right metric good vmid">1.36%</td>
+            <td class="right vmid"><span class="rev-tag">$732</span></td><td class="right metric vmid">6</td><td class="right metric vmid">$0.05</td><td class="right metric good vmid">2.01%</td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 22</td>
+            <td><div class="campaign-name">Perfect Pair: Shirts + Pajamas</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 60D</div></td>
+            <td class="right metric vmid">12,545</td><td class="right metric good vmid">70.9%</td><td class="right metric warn vmid">0.82%</td>
+            <td class="right vmid"><span class="rev-tag">$588</span></td><td class="right metric vmid">7</td><td class="right metric vmid">$0.05</td><td class="right metric good vmid">1.16%</td>
+            <td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 25</td>
+            <td><div class="campaign-name">FREE Pair On Us</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Engaged 90D</div></td>
+            <td class="right metric vmid">13,262</td><td class="right metric good vmid">68.2%</td><td class="right metric warn vmid">0.63%</td>
+            <td class="right vmid"><span class="rev-tag">$1,212</span></td><td class="right metric vmid">8</td><td class="right metric vmid">$0.09</td><td class="right metric warn vmid">0.93%</td>
+            <td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 27</td>
+            <td><div class="campaign-name">Wallet Balance Reminder</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">With Rewards Balance</div></td>
+            <td class="right metric vmid">898</td><td class="right metric good vmid">47.9%</td><td class="right metric good vmid">1.78%</td>
+            <td class="right vmid"><span class="rev-tag">$302</span></td><td class="right metric vmid">3</td><td class="right metric rpr-high vmid">$0.34 &#8593;</td><td class="right metric good vmid">3.71%</td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+          </tr>
+          <tr>
+            <td class="muted vmid">May 29</td>
+            <td><div class="campaign-name">What made you curious about hemp?</div><div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Buyer + Engaged 180D</div></td>
+            <td class="right metric vmid">18,514</td><td class="right metric good vmid">49.7%</td><td class="right metric flag vmid">0.46%</td>
+            <td class="right vmid"><span class="rev-tag">$984</span></td><td class="right metric vmid">6</td><td class="right metric vmid">$0.05</td><td class="right metric warn vmid">0.92%</td>
+            <td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td>
+          </tr>
         </tbody>
       </table>
     </div>
-    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Open rate target &gt;35% &nbsp;&middot;&nbsp; Click rate target &gt;1% &nbsp;&middot;&nbsp; All 10 campaigns delivered at 99.9%+</div>
-    <div class="section-label">Campaign Revenue - Ranked by Revenue</div>
-    <div class="table-card">
-      <table>
-        <thead>
-          <tr><th style="width:40px;">#</th><th>Campaign</th><th class="right">Revenue</th><th class="right">Orders</th><th class="right">Rev / Recipient</th><th class="right">CTOR</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="vmid"><span class="rank-num top3">1</span></td><td><div class="campaign-name">35% Off V-Neck Shirt <span class="muted" style="font-weight:400;font-size:12px;">- May 5</span></div></td><td class="right vmid"><span class="rev-tag">$1,629</span></td><td class="right metric vmid">14</td><td class="right metric vmid">$0.12</td><td class="right metric good vmid">1.58%</td></tr>
-          <tr><td class="vmid"><span class="rank-num top3">2</span></td><td><div class="campaign-name">35% Off Long Sleeve Shirts (Crimson) <span class="muted" style="font-weight:400;font-size:12px;">- May 15</span></div></td><td class="right vmid"><span class="rev-tag">$1,383</span></td><td class="right metric vmid">13</td><td class="right metric vmid">$0.10</td><td class="right metric good vmid">1.24%</td></tr>
-          <tr><td class="vmid"><span class="rank-num top3">3</span></td><td><div class="campaign-name">Product Highlight: Pajama Shorts <span class="muted" style="font-weight:400;font-size:12px;">- May 12</span></div></td><td class="right vmid"><span class="rev-tag">$1,323</span></td><td class="right metric vmid">9</td><td class="right metric rpr-high vmid">$0.19</td><td class="right metric good vmid">2.02%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">4</span></td><td><div class="campaign-name">Limited Edition Boxer Briefs Reminder <span class="muted" style="font-weight:400;font-size:12px;">- May 8</span></div></td><td class="right vmid"><span class="rev-tag">$1,323</span></td><td class="right metric vmid">8</td><td class="right metric vmid">$0.10</td><td class="right metric warn vmid">0.76%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">5</span></td><td><div class="campaign-name">FREE Pair On Us <span class="muted" style="font-weight:400;font-size:12px;">- May 25</span></div></td><td class="right vmid"><span class="rev-tag">$1,212</span></td><td class="right metric vmid">8</td><td class="right metric vmid">$0.09</td><td class="right metric warn vmid">0.93%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">6</span></td><td><div class="campaign-name">What made you curious about hemp? <span class="muted" style="font-weight:400;font-size:12px;">- May 29</span></div></td><td class="right vmid"><span class="rev-tag">$984</span></td><td class="right metric vmid">6</td><td class="right metric vmid">$0.05</td><td class="right metric warn vmid">0.92%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">7</span></td><td><div class="campaign-name">Drop #4 - Limited Edition Boxer Brief <span class="muted" style="font-weight:400;font-size:12px;">- May 19</span></div></td><td class="right vmid"><span class="rev-tag">$732</span></td><td class="right metric vmid">6</td><td class="right metric vmid">$0.05</td><td class="right metric good vmid">2.01%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">8</span></td><td><div class="campaign-name">Your Boys Deserve Better Than Synthetic <span class="muted" style="font-weight:400;font-size:12px;">- May 2</span></div></td><td class="right vmid"><span class="rev-tag">$643</span></td><td class="right metric vmid">6</td><td class="right metric vmid">$0.13</td><td class="right metric good vmid">1.26%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">9</span></td><td><div class="campaign-name">Perfect Pair: Shirts + Pajamas <span class="muted" style="font-weight:400;font-size:12px;">- May 22</span></div></td><td class="right vmid"><span class="rev-tag">$588</span></td><td class="right metric vmid">7</td><td class="right metric vmid">$0.05</td><td class="right metric good vmid">1.16%</td></tr>
-          <tr><td class="vmid"><span class="rank-num">10</span></td><td><div class="campaign-name">Wallet Balance Reminder <span class="muted" style="font-weight:400;font-size:12px;">- May 27</span></div></td><td class="right vmid"><span class="rev-tag">$302</span></td><td class="right metric vmid">3</td><td class="right metric rpr-high vmid">$0.34 &#8593;</td><td class="right metric good vmid">3.71%</td></tr>
-        </tbody>
-      </table>
+    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Open rate target &gt;35% &nbsp;&middot;&nbsp; Click rate target &gt;1% &nbsp;&middot;&nbsp; RPR = revenue per recipient &nbsp;&middot;&nbsp; All 10 campaigns delivered at 99.9%+</div>
+    <div class="insight-band">
+      <strong>Revenue per recipient (RPR)</strong> shows how efficiently each campaign converts its audience. The <strong>Wallet Balance Reminder</strong> ranks last in total revenue but earns <strong>$0.34 per recipient</strong> - the highest of any campaign this month. Growing this segment and building a dedicated rewards flow is the fastest low-effort revenue opportunity going into June.
     </div>
-    <div class="insight-band"><strong>Revenue per recipient (RPR)</strong> shows how efficiently each campaign converts its audience. The <strong>Wallet Balance Reminder</strong> ranks last in total revenue but earns <strong>$0.34 per recipient</strong> - the highest of any campaign this month. Growing this segment and building a dedicated rewards flow is the fastest low-effort revenue opportunity going into June.</div>
     <div class="section-label">Flow Revenue - Top Performers</div>
     <div class="flow-grid">
       <div class="flow-card top"><div class="flow-rank">1</div><div class="flow-info"><div class="flow-name">Welcome Series</div><div class="flow-meta">38.3% open &nbsp;·&nbsp; 3.65% click</div></div><div class="flow-rev-block"><div class="flow-rev">$20,889</div><div class="flow-orders">177 orders</div></div></div>
@@ -291,34 +342,110 @@
       <div class="flow-card"><div class="flow-rank">5</div><div class="flow-info"><div class="flow-name">Checkout Abandonment</div><div class="flow-meta">59.0% open &nbsp;·&nbsp; 6.18% click</div></div><div class="flow-rev-block"><div class="flow-rev">$819</div><div class="flow-orders">7 orders</div></div></div>
       <div class="flow-card"><div class="flow-rank">6</div><div class="flow-info"><div class="flow-name">Out For Delivery</div><div class="flow-meta">50.5% open &nbsp;·&nbsp; 10.33% click</div></div><div class="flow-rev-block"><div class="flow-rev">$727</div><div class="flow-orders">5 orders</div></div></div>
     </div>
-    <div class="section-label">Flow Health Check - All 17 Flows</div>
+    <div class="section-label">Flow Health Check</div>
     <div class="table-card">
       <table>
         <thead>
-          <tr><th>Flow</th><th class="right">Open Rate</th><th class="right">Click Rate</th><th class="right">Unsub Rate</th><th class="right">Spam Rate</th><th class="right">Revenue</th><th class="center">Status</th><th style="min-width:200px;">Next Action</th></tr>
+          <tr>
+            <th>Flow</th>
+            <th class="right">Open Rate</th>
+            <th class="right">Click Rate</th>
+            <th class="right">Unsub Rate</th>
+            <th class="right">Spam Rate</th>
+            <th class="right">Revenue</th>
+            <th class="center">Status</th>
+            <th style="min-width:200px;">Next Action</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td><div class="campaign-name">Welcome Series</div></td><td class="right metric good vmid">38.3%</td><td class="right metric good vmid">3.65%</td><td class="right metric warn vmid">1.57%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$20,889</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Monitor RPR per email. Emails 4+ may benefit from a stronger product push to extend the revenue tail.</div></td></tr>
-          <tr><td><div class="campaign-name">Cart Abandonment</div></td><td class="right metric good vmid">42.3%</td><td class="right metric good vmid">4.80%</td><td class="right metric vmid">0.31%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$2,381</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">High click rate signals strong intent. Test shortening the delay on email 1 to catch more subscribers at peak interest.</div></td></tr>
-          <tr><td><div class="campaign-name">Post Purchase Flow 2</div></td><td class="right metric good vmid">47.5%</td><td class="right metric good vmid">2.96%</td><td class="right metric warn vmid">0.62%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$1,129</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Add a cross-sell email targeting Boxer Brief buyers with Pajama Shorts to lift AOV from repeat buyers.</div></td></tr>
-          <tr><td><div class="campaign-name">Cross Sell</div></td><td class="right metric good vmid">49.7%</td><td class="right metric good vmid">2.28%</td><td class="right metric vmid">0.42%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$980</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Test dynamic product blocks personalised by purchase history to improve click-to-purchase rate.</div></td></tr>
-          <tr><td><div class="campaign-name">Checkout Abandonment</div></td><td class="right metric good vmid">59.0%</td><td class="right metric good vmid">6.18%</td><td class="right metric warn vmid">0.56%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$819</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Strong performer. Test adding a second email for non-openers at 24h to recover more abandoned sessions.</div></td></tr>
-          <tr><td><div class="campaign-name">Out For Delivery</div></td><td class="right metric good vmid">50.5%</td><td class="right metric good vmid">10.33%</td><td class="right metric vmid">0.13%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$727</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Highest click rate of all flows. Add a post-delivery review request email to build social proof and repeat purchase intent.</div></td></tr>
-          <tr><td><div class="campaign-name">Winback</div></td><td class="right metric good vmid">44.7%</td><td class="right metric good vmid">2.43%</td><td class="right metric vmid">0.09%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$447</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Good engagement for a winback flow. Test a third email at 60 days with a plain text personal angle to push higher-intent lapsed buyers.</div></td></tr>
-          <tr><td><div class="campaign-name">Site Abandonment</div></td><td class="right metric good vmid">51.4%</td><td class="right metric good vmid">2.82%</td><td class="right metric warn vmid">1.41%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$371</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Unsubscribe rate is elevated (1.41%). Review the trigger - may be firing too broadly. Consider tightening to high-intent sessions only (2+ pages or 60s+ on site).</div></td></tr>
-          <tr><td><div class="campaign-name">Rise Store Credit</div></td><td class="right metric good vmid">51.3%</td><td class="right metric good vmid">2.40%</td><td class="right metric warn vmid">0.84%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$184</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Good engagement. Grow the rewards segment - the Wallet Balance campaign proved this audience converts at $0.34 RPR.</div></td></tr>
-          <tr><td><div class="campaign-name">Browse Abandonment</div></td><td class="right metric good vmid">80.0%</td><td class="right metric good vmid">23.9%</td><td class="right metric vmid">0.00%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$99</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Outstanding engagement. Only 260 recipients - the trigger is likely too narrow. Broaden the browse condition to capture more subscribers.</div></td></tr>
-          <tr><td><div class="campaign-name">Re-engagement 30D</div></td><td class="right metric flag vmid">19.1%</td><td class="right metric flag vmid">0.63%</td><td class="right metric warn vmid">1.06%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$40</span></td><td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td><td><div class="next-action-text"><strong>Both open and click below threshold.</strong> Full refresh needed - new subject lines, new copy, soft offer in email 2. Test plain text email 1.</div></td></tr>
-          <tr><td><div class="campaign-name">Failure to Launch</div></td><td class="right metric good vmid">55.7%</td><td class="right metric warn vmid">1.15%</td><td class="right metric warn vmid">0.66%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td><td><div class="next-action-text">Opens strong, clicks short. Simplify to one product and one CTA button - test removing all secondary links.</div></td></tr>
-          <tr><td><div class="campaign-name">PP Repeat Purchaser</div></td><td class="right metric good vmid">58.0%</td><td class="right metric good vmid">9.94%</td><td class="right metric vmid">0.00%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td><td><div class="next-action-text">Exceptional click rate (9.94%). Verify attribution setup. Add specific product recommendation to convert high engagement into orders.</div></td></tr>
-          <tr><td><div class="campaign-name">Social Snowball PP</div></td><td class="right metric good vmid">50.9%</td><td class="right metric warn vmid">0.71%</td><td class="right metric warn vmid">1.78%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-amber"><span class="dot dot-a"></span>Watch</span></td><td><div class="next-action-text">Click rate and unsub rate both flagged. Test delaying trigger by 7-10 days post-delivery and simplifying the ask.</div></td></tr>
-          <tr><td><div class="campaign-name">First Purchase Anniversary</div></td><td class="right metric good vmid">79.3%</td><td class="right metric flag vmid">0.00%</td><td class="right metric vmid">0.00%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td><td><div class="next-action-text"><strong>Zero clicks despite 79% open rate.</strong> CTA link is likely broken or missing. Check in Klaviyo immediately.</div></td></tr>
-          <tr style="opacity:.65;"><td><div class="campaign-name">Never Engaged</div></td><td class="right metric muted vmid">2.2%</td><td class="right metric muted vmid">0.36%</td><td class="right metric muted vmid">0.73%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-muted"><span class="dot dot-m"></span>Sunset</span></td><td><div class="next-action-text">Hygiene flow - not benchmarked. Ensure subscribers are suppressed at exit.</div></td></tr>
-          <tr style="opacity:.65;"><td><div class="campaign-name">Re-engagement Welcome</div></td><td class="right metric muted vmid">2.2%</td><td class="right metric muted vmid">0.00%</td><td class="right metric muted vmid">1.10%</td><td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td><td class="center vmid"><span class="tag tag-muted"><span class="dot dot-m"></span>Sunset</span></td><td><div class="next-action-text">Sunset flow - confirm exit condition removes profiles from active sends after sequence completes.</div></td></tr>
+          <tr>
+            <td><div class="campaign-name">Welcome Series</div></td>
+            <td class="right metric good vmid">38.3%</td><td class="right metric good vmid">3.65%</td><td class="right metric warn vmid">1.57%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$20,889</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Monitor RPR per email. Emails 4+ may benefit from a stronger product push to extend the revenue tail.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Cart Abandonment</div></td>
+            <td class="right metric good vmid">42.3%</td><td class="right metric good vmid">4.80%</td><td class="right metric vmid">0.31%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$2,381</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">High click rate signals strong intent. Test shortening the delay on email 1 to catch more subscribers at peak interest.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Post Purchase Flow 2</div></td>
+            <td class="right metric good vmid">47.5%</td><td class="right metric good vmid">2.96%</td><td class="right metric warn vmid">0.62%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$1,129</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Add a cross-sell email targeting Boxer Brief buyers with Pajama Shorts to lift AOV from repeat buyers.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Cross Sell</div></td>
+            <td class="right metric good vmid">49.7%</td><td class="right metric good vmid">2.28%</td><td class="right metric vmid">0.42%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$980</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Test dynamic product blocks personalised by purchase history to improve click-to-purchase rate.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Checkout Abandonment</div></td>
+            <td class="right metric good vmid">59.0%</td><td class="right metric good vmid">6.18%</td><td class="right metric warn vmid">0.56%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$819</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Strong performer. Test adding a second email for non-openers at 24h to recover more abandoned sessions.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Out For Delivery</div></td>
+            <td class="right metric good vmid">50.5%</td><td class="right metric good vmid">10.33%</td><td class="right metric vmid">0.13%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$727</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Highest click rate of all flows. Add a post-delivery review request email to build social proof and repeat purchase intent.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Winback</div></td>
+            <td class="right metric good vmid">44.7%</td><td class="right metric good vmid">2.43%</td><td class="right metric vmid">0.09%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$447</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Good engagement for a winback flow. Test a third email at 60 days with a plain text personal angle to push higher-intent lapsed buyers.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Site Abandonment</div></td>
+            <td class="right metric good vmid">51.4%</td><td class="right metric good vmid">2.82%</td><td class="right metric warn vmid">1.41%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$371</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Unsubscribe rate is elevated (1.41%). Review the trigger - may be firing too broadly. Consider tightening to high-intent sessions only (2+ pages or 60s+ on site).</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Rise Store Credit</div></td>
+            <td class="right metric good vmid">51.3%</td><td class="right metric good vmid">2.40%</td><td class="right metric warn vmid">0.84%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$184</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Good engagement. Grow the rewards segment - the Wallet Balance campaign proved this audience converts at $0.34 RPR. More subscribers in this flow means more revenue.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">Browse Abandonment</div></td>
+            <td class="right metric good vmid">80.0%</td><td class="right metric good vmid">23.9%</td><td class="right metric vmid">0.00%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag">$99</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Outstanding engagement. Only 260 recipients - the trigger is likely too narrow. Broaden the browse condition to capture more subscribers and scale this flow's revenue.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">PP Repeat Purchaser</div></td>
+            <td class="right metric good vmid">58.0%</td><td class="right metric good vmid">9.94%</td><td class="right metric vmid">0.00%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td>
+            <td class="center vmid"><span class="tag tag-green"><span class="dot dot-g"></span>Healthy</span></td>
+            <td><div class="next-action-text">Exceptional click rate (9.94%). No revenue attributed in this window - verify attribution is set up correctly. Consider adding a specific product recommendation to convert high engagement into orders.</div></td>
+          </tr>
+          <tr>
+            <td><div class="campaign-name">First Purchase Anniversary</div></td>
+            <td class="right metric good vmid">79.3%</td><td class="right metric flag vmid">0.00%</td><td class="right metric vmid">0.00%</td>
+            <td class="right muted vmid">-</td><td class="right vmid"><span class="rev-tag" style="color:var(--muted);">$0</span></td>
+            <td class="center vmid"><span class="tag tag-red"><span class="dot dot-r"></span>Review</span></td>
+            <td><div class="next-action-text"><strong>Zero clicks despite 79% open rate.</strong> CTA link is likely broken or missing. Check the email in Klaviyo immediately - this audience is engaged and the flow should be generating repeat purchases.</div></td>
+          </tr>
         </tbody>
       </table>
     </div>
-    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">All 17 active flows tracked. Flow benchmarks: open &gt;25% - click &gt;1.5% - unsub watch at &gt;0.50% - Sunset flows not benchmarked. Spam rate data available from July 2026 onwards.</div>
+    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">12 active revenue-generating flows tracked. &nbsp;&middot;&nbsp; Flow benchmarks: open &gt;25% &nbsp;·&nbsp; click &gt;1.5% &nbsp;·&nbsp; unsub watch at &gt;0.50% &nbsp;&middot;&nbsp; Spam rate data available from July 2026 report onwards.</div>
     <div class="section-label">Email Health</div>
     <div class="health-grid">
       <div class="health-card"><div class="health-icon">&#9989;</div><div><div class="health-heading">Deliverability is excellent</div><div class="health-body">All 10 campaigns landed at 99.9%+ delivery. No inbox placement issues. Sender reputation is in great shape.</div></div></div>
@@ -334,8 +461,18 @@
         <div class="test-body">Moving the primary CTA above the fold in 3 June campaigns to test whether earlier visibility lifts click rate on emails that are already opening at 60%+.</div>
         <div class="test-hypothesis"><strong>Hypothesis:</strong> If subscribers are interested enough to open, removing scroll friction should increase clicks on high-open campaigns.</div>
       </div>
-      <div class="test-card empty"><div class="fill-in-item">&#9998; Test 02 - add name, what you're testing, and hypothesis before publishing</div></div>
-      <div class="test-card empty"><div class="fill-in-item">&#9998; Test 03 - add name, what you're testing, and hypothesis before publishing</div></div>
+      <div class="test-card">
+        <div class="test-badge">Test 02</div>
+        <div class="test-title">Welcome Series subject line A/B test</div>
+        <div class="test-body">Testing two different subject line styles across the Welcome Series to find what drives stronger open rates. Variant A uses a curiosity-driven question. Variant B leads with a direct product benefit. Running across new subscribers entering the flow in June.</div>
+        <div class="test-hypothesis"><strong>Hypothesis:</strong> The Welcome Series open rate is solid at 38.3% but has room to grow. Finding a stronger subject line formula here compounds across every new subscriber who enters the flow.</div>
+      </div>
+      <div class="test-card">
+        <div class="test-badge">Test 03</div>
+        <div class="test-title">First Purchase Anniversary - content and design refresh</div>
+        <div class="test-body">The Anniversary flow opens at 79.3% but has zero clicks. Testing a redesigned email with a prominent CTA button, a clearer offer, and simplified layout to convert that engagement into purchases. Running as an A/B test against the existing version once the CTA link issue is confirmed fixed.</div>
+        <div class="test-hypothesis"><strong>Hypothesis:</strong> A 79% open rate with 0% clicks is a layout or link problem, not an audience problem. Fixing the CTA and simplifying the design should unlock purchases from a highly engaged segment.</div>
+      </div>
     </div>
     <div class="section-label">What to Watch in June</div>
     <div class="watch-list">
@@ -356,19 +493,19 @@
         <div class="steal-header"><span class="steal-num">Steal 01</span><span class="steal-source">NADS</span></div>
         <div class="steal-title">Named bundle tiers - "Get a Bundle + Save Up to 40%"</div>
         <div class="steal-body">NADS introduced three named bundle tiers in May: Tactical Set (2 pairs, 25% off), Heavy Hitter (3 pairs, 35% off), Kings Pack (4+ pairs, 40% off). Preview line: "Use that cash for beer." Volume-based savings, not urgency-based - disciplined offer management that lifts AOV without training the list to wait for flash sales. It was the only time they exceeded 15% off all month.</div>
-        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">A Boxer Briefs + Trunks bundle campaign with named tiers. "The Starter" (2 pairs, 10% off) - "The Full Week" (4 pairs, 15% off) - "The Upgrade" (6 pairs, 20% off). Send to Engaged 90D buyers who haven't purchased in 60+ days. AOV play - we've never run a structured bundle campaign.</div></div>
+        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">A Boxer Briefs + Trunks bundle campaign with named tiers. "The Starter" (2 pairs, 10% off) - "The Full Week" (4 pairs, 15% off) - "The Upgrade" (6 pairs, 20% off). Send to Engaged 90D buyers who haven't purchased in 60+ days. AOV play - we've never run a structured bundle campaign. Boxer Briefs + Trunks is the natural starting pair.</div></div>
       </div>
       <div class="steal-card">
         <div class="steal-header"><span class="steal-num">Steal 02</span><span class="steal-source">NADS</span></div>
         <div class="steal-title">Quote-led subject line - "I Should Have Switched Years Ago"</div>
-        <div class="steal-body">NADS ran a customer testimonial email on May 16 using a direct customer quote as the subject line. No discount. No offer. The subject line did all the work - it reads as real, not polished. Quote-led subject lines consistently outperform brand-written ones because they feel like something a friend would say.</div>
-        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">Plain text email to Buyers + Engaged 180D. Pull a real customer review or Yotpo quote that echoes the "I should have switched" sentiment about hemp. Let the customer voice carry the email. No offer needed - social proof does the conversion work.</div></div>
+        <div class="steal-body">NADS ran a customer testimonial email on May 16 using a direct customer quote as the subject line. No discount. No offer. The subject line did all the work - it reads as real, not polished. Quote-led subject lines consistently outperform brand-written ones because they feel like something a friend would say. NADS also used "upgraded" as a key word across several emails - framing the switch as an upgrade, not just a product change.</div>
+        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">Plain text email to Buyers + Engaged 180D. Pull a real customer review or Yotpo quote that echoes the "I should have switched" sentiment about hemp. Let the customer voice carry the email. No offer needed - social proof does the conversion work. Subject: pull the quote verbatim and let it stand alone.</div></div>
       </div>
       <div class="steal-card">
         <div class="steal-header"><span class="steal-num">Steal 03</span><span class="steal-source">NADS</span></div>
         <div class="steal-title">Gift angle targeting women buyers - "slip them in his drawer and wait"</div>
-        <div class="steal-body">NADS ran a gifting-angle email on May 7 targeting women buying underwear for their partner or boyfriend. No discount. The copy framed the purchase as a quiet upgrade the guy wouldn't buy himself. It opens a gifting funnel without any promotional pressure.</div>
-        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">A gift-framing campaign targeting female buyers or subscribers who haven't purchased. "He won't buy hemp underwear himself. That's your move." No discount needed. Send around Father's Day, birthday, or as a non-seasonal angle.</div></div>
+        <div class="steal-body">NADS ran a gifting-angle email on May 7 targeting women buying underwear for their partner or boyfriend. No discount. The copy framed the purchase as a quiet upgrade the guy wouldn't buy himself - "slip them in his drawer and wait." No offer, no urgency - just a new buyer segment most underwear brands ignore. It opens a gifting funnel without any promotional pressure.</div>
+        <div class="steal-wama-box"><div class="steal-wama-label">WAMA Version</div><div class="steal-wama-text">A gift-framing campaign targeting female buyers or subscribers who haven't purchased (potential gift buyers). Tone: warm, slightly playful. "He won't buy hemp underwear himself. That's your move." No discount needed. Send around a natural gifting moment - Father's Day, birthday, or just a regular week as a non-seasonal angle. Soft CTA to shop as a gift.</div></div>
       </div>
     </div>
     <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">Source: WAMA Competitor Monthly Report - May 2026. NADS sent 20 emails in May (UndrDog tracking started June 2026 - no May data). From July 2026 this section auto-populates from weekly intel tracking files.</div>
